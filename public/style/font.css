@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @font-face {
   font-family: IRANSansfa;
   font-style: normal;
@@ -85,80 +81,40 @@
 }
 
 * {
-  font-family: IRANSansfa !important;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  margin: 0;
+  outline: none !important;
+  list-style-type: none;
   font-family: IRANSansfa;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+html,
+body {
+  padding: 0;
+  margin: 0;
 }
 
-* {
-  box-sizing: border-box;
-  font-family: IRANSansfa !important;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-@layer base {
-  html {
-    font-size: 100%;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    box-sizing: border-box;
-  }
-
-  input,
-  select,
-  button {
-    font: inherit;
-  }
+body {
+  line-height: 1;
+  overflow-x: hidden;
 }
 
-@layer components {
-  .container {
-    max-width: 1200px;
-    margin-inline: auto;
-    padding-inline: 10px;
-  }
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
-  width: 100%;
-  max-width: fit-content !important;
-  height: 588px;
-  border-radius: 12px !important;
+a:hover {
+  color: inherit;
 }
 
-.bottom-nav {
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 12px;
-  padding-bottom: 4px;
-  height: 60px;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-
-.red {
-  color: #f01436;
-}
-
-.black {
-  color: #363636;
-}
-
-.css-9emuhu-MuiPaper-root-MuiDrawer-paper {
-  height: 100% !important;
-  width: 100%;
-}
-
