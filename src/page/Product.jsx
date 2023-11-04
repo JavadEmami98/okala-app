@@ -1,9 +1,15 @@
-import { Box } from "@mui/material";
+import { Box, Collapse, Switch } from "@mui/material";
 import React from "react";
 import HeaderOkala from "../component/layout/header/HeaderOkala";
 import HeaderMobile from "../component/layout/header/HeaderMobile";
 import SwapVertIcon from "@mui/icons-material/SwapVert";
 import CartProduct from "../component/Cart/CartProduct";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import AvailableBrands from "../component/AvailableBrands/AvailableBrands";
+import FilterPrice from "../component/FilterPrice/FilterPrice";
 
 const data = [
   {
@@ -58,6 +64,11 @@ const data = [
 ];
 
 function Product() {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
   return (
     <div>
       <Box
@@ -94,15 +105,80 @@ function Product() {
           {/* Right */}
           <div className="max-w-[324px] min-w-[280px] pl-4">
             <div className="sticky  top-28">
-                <div className="mb-3 rounded-xl p-4 max-h-[280px] min-h-[54px] flex flex-col transition-all duration-300" style={{boxShadow:" rgba(22, 22, 22, 0.04) 0px 2px"}}>
-                    <div className="h-[33px] flex justify-between items-center mb-3 relative">
-                        <p className="border-r-4 border-[#02a0a4] border-opacity-70 pr-1 text-sm font-medium">
-                        فیلترهای اعمال شده
-                        </p>
-                        <button><span className="text-xs text-red-600">
-                            حذف همه</span></button>
-                    </div>
+              <div
+                className="mb-3 rounded-xl p-4 max-h-[280px] min-h-[54px] flex flex-col transition-all duration-300"
+                style={{ boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px" }}
+              >
+                <div className="h-[33px] flex justify-between items-center mb-3 relative">
+                  <p className="border-r-4 border-[#02a0a4] border-opacity-70 pr-1 text-sm font-medium">
+                    فیلترهای اعمال شده
+                  </p>
+                  <button>
+                    <span className="text-xs text-red-600">حذف همه</span>
+                  </button>
                 </div>
+              </div>
+              <div
+                className="mb-3 rounded-xl p-4 max-h-[280px] min-h-[54px] flex flex-col transition-all duration-300"
+                style={{ boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px" }}
+              >
+                <div
+                  onClick={handleClick}
+                  className="h-[33px] flex justify-between items-center mb-3 relative"
+                >
+                  <p className="border-r-4 border-[#02a0a4] border-opacity-70 pr-1 text-sm font-medium">
+                    دسته بندی نتایج
+                  </p>
+                  {open ? (
+                    <ExpandLess sx={{ cursor: "pointer" }} />
+                  ) : (
+                    <ExpandMore sx={{ cursor: "pointer" }} />
+                  )}
+                </div>
+                <Collapse in={open} timeout="auto" unmountOnExit>
+                  <div className="flex w-full items-center mb-3">
+                    <KeyboardArrowDownIcon
+                      sx={{ width: "18px", height: "18px" }}
+                    />
+                    <p className="text-sm text-gray-600 mr-1.5 hover:text-gray-700 cursor-pointer">
+                      خواربار
+                    </p>
+                  </div>
+                  <div className="flex items-center mr-4">
+                    <KeyboardArrowLeftIcon
+                      sx={{
+                        color: "rgb(104, 104, 104)",
+                        width: "14px",
+                        height: "14px",
+                      }}
+                    />
+                    <span className="text-sm text-gray-600 hover:text-gray-800 mr-1.5">
+                      برنج
+                    </span>
+                    <span className="text-gray-400 mr-1.5 text-xs">(7)</span>
+                  </div>
+                  <div className="flex items-center mr-7 mb-1 mt-2.5 text-gray-800 font-medium">
+                    <span className="text-sm text-gray-600 hover:text-gray-800 mr-1.5">
+                      برنج ایرانی
+                    </span>
+                    <span className="text-gray-400 mr-1.5 text-xs">(77)</span>
+                  </div>
+                </Collapse>
+              </div>
+              {/* Brand mojud */}
+              <AvailableBrands />
+              {/* kala mojud */}
+              <div
+                className="mb-3 rounded-xl p-4 max-h-[280px] min-h-[54px] flex flex-col transition-all duration-300"
+                style={{ boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px" }}
+              >
+                <div className="flex items-center">
+                  <Switch color="error" />
+                  <p className="text-[.875rem]">فقط کالاهای موجود</p>
+                </div>
+              </div>
+              {/* Filter gheymat */}
+              <FilterPrice />
             </div>
           </div>
           {/* Left */}
@@ -161,12 +237,15 @@ function Product() {
               </ul>
             </div>
             <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3">
-            {data.map((item, index) => (
-              <CartProduct  key={index} image={item.image}
-              oldprice={item.oldprice}
-              price={item.price}
-              offer={item.offer}
-              description={item.description} />
+              {data.map((item, index) => (
+                <CartProduct
+                  key={index}
+                  image={item.image}
+                  oldprice={item.oldprice}
+                  price={item.price}
+                  offer={item.offer}
+                  description={item.description}
+                />
               ))}
             </div>
           </div>
