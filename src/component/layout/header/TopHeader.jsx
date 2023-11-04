@@ -1,15 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import StorefrontOutlinedIcon from "@mui/icons-material/StorefrontOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import HamMenu from "./HamMenu";
 import LocationDialog from "./LocationDialog";
 import Account from "./Account";
-import TopHeader from "./TopHeader";
+import { Box } from "@mui/material";
+import SearchPosition from "./SearchPosition";
 
-function HeaderOkala() {
+function TopHeader() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
   return (
-    <>
-      <TopHeader />
+    <Box
+      sx={{
+        /*   borderBottom: " 2px solid rgba(0, 0, 0, 0.12)", */
+       /*  top: scrollPosition > 150 ? {color:"red"} : "-1px", */
+        transition: "all 300ms ease",
+      }}
+      className="fixed bg-white z-40  right-0 left-0 "
+      component={"nav"}
+    >
       <div className="sticky flex items-center justify-between border-b border-[#e6e6e6] shadow-[0_4px_16px_rgb(22,22,22,.08)]">
         <div className="container flex py-6 items-center justify-between">
           <div className="flex items-center">
@@ -24,7 +45,7 @@ function HeaderOkala() {
               <p className="text-sm text-[#363636] pr-1"> مشاهده فروشگاه‌ها</p>
             </div>
           </div>
-          <LocationDialog />
+         {scrollPosition > 200 ? (<SearchPosition/> ):(<><LocationDialog /></>)}
           <div>
             <div className="flex items-center">
               <Account />
@@ -46,8 +67,8 @@ function HeaderOkala() {
           </div>
         </div>
       </div>
-    </>
+    </Box>
   );
 }
 
-export default HeaderOkala;
+export default TopHeader;

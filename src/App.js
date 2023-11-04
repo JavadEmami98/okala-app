@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Index from "./page";
 import ProfileMobile from "./page/ProfileMobile";
+import Product from "./page/Product";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/product" element={<Product />} />
           <Route path="/profile-mobile" element={<ProfileMobile />} />
         </Routes>
       </BrowserRouter>

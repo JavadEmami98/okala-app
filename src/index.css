@@ -139,7 +139,7 @@ code {
 .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
   width: 100%;
   max-width: fit-content !important;
-  height: 588px;
+  height: 100% !important;
   border-radius: 12px !important;
 }
 

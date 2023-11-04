@@ -7,9 +7,10 @@ import DriveFileRenameOutlineOutlinedIcon from "@mui/icons-material/DriveFileRen
 import Slide from "@mui/material/Slide";
 import CheckBoxOutlinedIcon from "@mui/icons-material/CheckBoxOutlined";
 import { TransitionProps } from "@mui/material/transitions";
-import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
+
 import AddIcon from "@mui/icons-material/Add";
 import { Box, Button } from "@mui/material";
+import DeleteDialog from "../../DeleteDialog/DeleteDialog";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -62,59 +63,62 @@ function LocationDialog() {
         <div className="flex justify-between flex-col p-6 rounded-[12px] h-full w-full min-w-[850px]">
           <div className="flex flex-col ">
             <div className="flex pt-[4px] pb-[16px] pl-[8px]">
-               <div className=" border-l-[4px] border-[#7cc8cc] rounded-[100px] h-[20px] ml-[10px]"></div>
-            <h6 className="text-base font-medium text-grey-900">انتخاب آدرس</h6> 
+              <div className=" border-l-[4px] border-[#7cc8cc] rounded-[100px] h-[20px] ml-[10px]"></div>
+              <h6 className="text-base font-medium text-grey-900">
+                انتخاب آدرس
+              </h6>
             </div>
-           
-             <div className="flex flex-col justify-between cursor-pointer p-4 rounded-md border bg-[#e0f2f4] border-teal-100 hover:bg-[#7cc8cc]">
-            <div className="flex h-[68px]">
-              <CheckBoxOutlinedIcon sx={{ color: "#02a0a4", mr: "8px" }} />
-              <p>سید رضی 46 پلاک ۳۱۳ - پلاک ۳۱۳ - واحد ۲</p>
-            </div>
-            <div className="flex items-center justify-between">
-              <p className="text-[#8f8f8f] text-[18px]">09015427057</p>
-              <div className="flex">
-                <Box
-                  variant="outlined"
-                  sx={{
-                    display: "flex",
-                    ":hover": { backgroundColor: "#f8f8f8" },
-                    justifyContent: "center",
-                    alignItems: "center",
-                    backgroundColor: "#FFF",
-                    height: "48px",
-                    width: "48px",
-                    padding: "6px 8px",
-                    ml: "10px",
-                    borderRadius: "10px",
-                  }}
-                >
-                  <DriveFileRenameOutlineOutlinedIcon
-                    sx={{ height: "24px", width: "24px" }}
-                  />
-                </Box>
-                <Box
-                  variant="outlined"
-                  sx={{
-                    display: "flex",
-                    ":hover": { backgroundColor: "#f8f8f8" },
-                    justifyContent: "center",
-                    alignItems: "center",
-                    backgroundColor: "#FFF",
-                    height: "48px",
-                    width: "48px",
-                    padding: "6px 8px",
-                    ml: "10px",
-                    borderRadius: "10px",
-                  }}
-                >
-                  <DeleteOutlinedIcon sx={{ height: "24px", width: "24px" }} />
-                </Box>
+
+            <div className="flex flex-col justify-between cursor-pointer p-4 rounded-md border bg-[#e0f2f4] border-[#b0dee0] hover:bg-[#b0dee0]">
+              <div className="flex h-[68px]">
+                <CheckBoxOutlinedIcon sx={{ color: "#02a0a4", mr: "8px" }} />
+                <p>سید رضی 46 پلاک ۳۱۳ - پلاک ۳۱۳ - واحد ۲</p>
+              </div>
+              <div className="flex items-center justify-between">
+                <p className="text-[#8f8f8f] text-[18px]">09015427057</p>
+                <div className="flex">
+                  <Box
+                    variant="outlined"
+                    sx={{
+                      display: "flex",
+                      ":hover": { backgroundColor: "#f8f8f8" },
+                      justifyContent: "center",
+                      alignItems: "center",
+                      backgroundColor: "#FFF",
+                      height: "48px",
+                      width: "48px",
+                      padding: "6px 8px",
+                      ml: "10px",
+                      borderRadius: "10px",
+                    }}
+                  >
+                    <DriveFileRenameOutlineOutlinedIcon
+                      sx={{ height: "24px", width: "24px" }}
+                    />
+                  </Box>
+                  <Box
+                    variant="outlined"
+                    sx={{
+                      display: "flex",
+                      ":hover": { backgroundColor: "#f8f8f8" },
+                      justifyContent: "center",
+                      alignItems: "center",
+                      backgroundColor: "#FFF",
+                      height: "48px",
+                      width: "48px",
+                      padding: "6px 8px",
+                      ml: "10px",
+                      borderRadius: "10px",
+                    }}
+                  >
+                   
+                    <DeleteDialog/>
+                  </Box>
+                </div>
               </div>
             </div>
           </div>
-          </div>
-       
+
           <DialogActions>
             <Button
               variant="outlined"
