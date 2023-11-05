@@ -9,7 +9,7 @@ function Footer() {
   return (
     <>
       <div>
-        <div className="border-t border-grey-200 xs:mt-4 md:mt-0 absolute bottom-0 left-0 w-full">
+        <div className="border-t border-grey-200 xs:mt-4 md:mt-0  w-full">
           <div className="container flex flex-col">
             <div className="flex flex-col rounded-lg bg-gray-100 m-3 p-4 md:mx-0">
               <div className="flex items-center justify-between">
