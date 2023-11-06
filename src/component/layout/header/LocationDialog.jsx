@@ -64,7 +64,7 @@ function LocationDialog() {
           <div className="flex flex-col ">
             <div className="flex pt-[4px] pb-[16px] pl-[8px]">
               <div className=" border-l-[4px] border-[#7cc8cc] rounded-[100px] h-[20px] ml-[10px]"></div>
-              <h6 className="text-base font-medium text-grey-900">
+              <h6 className="text-base font-medium text-gray-900">
                 انتخاب آدرس
               </h6>
             </div>

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import AssignmentOutlinedIcon from "@mui/icons-material/AssignmentOutlined";
 import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import Orders from "./Orders";
@@ -33,26 +31,27 @@ function BottomNav() {
             style={{ color: activeItem === "sabad" ? "red" : "black" }}
             className="flex flex-col items-center justify-center max-w-[92px] w-full max-h-12  p-[6px_8px]"
           >
-         <Cart/>
+            <Cart />
           </div>
           <div
             onClick={() => handleClick("order")}
             style={{ color: activeItem === "order" ? "red" : "black" }}
             className="flex flex-col items-center justify-center max-w-[92px] w-full max-h-12  p-[6px_8px]"
           >
-           <Orders/>
+            <Orders />
           </div>
-          <Link to={'/profile-mobile'}>
-          <div
-            onClick={() => handleClick("profile")}
-            style={{ color: activeItem === "profile" ? "red" : "black" }}
-            className="flex flex-col items-center justify-center max-w-[92px] w-full max-h-12  p-[6px_8px]"
-          >
-            <AccountCircleOutlinedIcon />
-            <Typography sx={{ fontSize: "14px !important", mt: "4px" }}>
-              پروفایل
-            </Typography>
-          </div></Link>
+          <Link to={"/profile-mobile"}>
+            <div
+              onClick={() => handleClick("profile")}
+              style={{ color: activeItem === "profile" ? "red" : "black" }}
+              className="flex flex-col items-center justify-center max-w-[92px] w-full max-h-12  p-[6px_8px]"
+            >
+              <AccountCircleOutlinedIcon />
+              <Typography sx={{ fontSize: "14px !important", mt: "4px" }}>
+                پروفایل
+              </Typography>
+            </div>
+          </Link>
         </div>
       </div>
     </footer>

@@ -1,14 +1,17 @@
 import React from "react";
 import HeaderOkala from "../component/layout/header/HeaderOkala";
-import { Box, Button } from "@mui/material";
-import HeaderMobile from "../component/layout/header/HeaderMobile";
-import BottomNav from "../component/layout/footer/BottomNav";
+import { Box, Button, Drawer } from "@mui/material";
+import EastIcon from "@mui/icons-material/East";
 import Footer from "../component/layout/footer/Footer";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import FactorSwiper from "../component/FactorSwiper/FactorSwiper";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
 
 function Factor() {
+  const [open, setOpen] = React.useState(false);
   return (
     <div>
       <Box
@@ -35,23 +38,42 @@ function Factor() {
           },
         }}
       >
-        <HeaderMobile />
+        <Box
+          sx={{
+            boxShadow:
+              "rgba(22, 22, 22, 0.04) 0px 2px 4px -1px, rgba(22, 22, 22, 0.04) 0px 4px 8px -1px",
+          }}
+          className="px-[10px] h-[56px] flex items-center justify-start"
+        >
+          <EastIcon sx={{ width: "20px", height: "20px" }} />
+          <div className="pr-4">
+            <div className="flex items-center gap-2 font-semibold">
+              سبد خرید
+              <div className="flex items-center justify-center rounded-[50%] bg-[#02a0a4] text-[#fff] text-[12px] min-w-[20px] py-[2px] px-[6px]">
+                2
+              </div>
+            </div>
+          </div>
+        </Box>
       </Box>
       <main className="container">
-        <div className=" w-full flex mt-9 h-fit mb-32">
+        <div className=" w-full flex lg:mt-9 md:mt-9 h-fit mb-32">
           {/* Right */}
-          <div className="w-7/12 lg:w-8/12">
+          <div className="w-full lg:w-8/12">
             <div className="bg-white rounded-xl shadow flex-grow">
               <div className="flex items-center px-6 py-6">
-                <div className="flex items-center">
+                <div className="flex items-center w-full">
                   <img
                     src="/image/ok.png"
                     alt=""
                     className="h-[68px] w-[68px]"
                   />
-                  <h6 className="text-base font-medium text-gray-900 mr-4">
+                  <h6 className="text-base text-start font-medium text-gray-900 mr-4 w-full">
                     افق کوروش امامت 56
                   </h6>
+                  <div className="flex md:hidden lg:hidden justify-end items-start mb-9 w-[30%]">
+                    <DeleteOutlineIcon />
+                  </div>
                 </div>
               </div>
               <div className="px-6">
@@ -210,7 +232,7 @@ function Factor() {
             </div>
           </div>
           {/* Left */}
-          <div className="w-5/12 lg:w-4/12">
+          <div className="hidden md:hidden lg:block w-5/12 lg:w-4/12">
             <div className="p-4 mr-4 bg-white shadow rounded-xl">
               <div className="flex items-center mb-4">
                 <hr className=" border-l-[4px] border-[#7cc8cc] rounded-[100px] h-[16px] ml-[10px]" />
@@ -313,7 +335,140 @@ function Factor() {
             },
           }}
         >
-          <BottomNav />
+          <div className="flex items-center justify-between px-4 py-3">
+            <Button
+              variant="contained"
+              sx={{
+                width: "fit",
+                fontSize: "14px",
+                height: "36.5px",
+                backgroundColor: "#f01436",
+                borderRadius: "10px",
+                "&:hover": { backgroundColor: "#f01436" },
+                boxShadow: "none !important",
+              }}
+            >
+              انتخاب زمان تحویل
+            </Button>
+            <div
+              onClick={() => setOpen(true)}
+              className="flex flex-col cursor-pointer select-none"
+            >
+              <div className="flex items-center">
+                <span className="text-xs font-normal text-gray-800 ml-1">
+                  جزئیات فاکتور
+                </span>
+
+                {open ? <ExpandMore /> : <ExpandLess />}
+              </div>
+              <div className="flex gap-2">
+                <span className="text-base font-medium text-gray-900">
+                  ۵۶۲٬۶۰۰
+                </span>
+                <span className="text-sm font-normal text-gray-600"> ريال</span>{" "}
+              </div>
+            </div>{" "}
+            <Drawer
+              anchor={"bottom"}
+              open={open}
+              onClose={() => setOpen(false)}
+            >
+              <div className="bg-white fixed bottom-0 w-full shadow-xl overflow-y-hidden rounded-t-xl pt-1 h-fit">
+                <div className="flex flex-col overflow-y-hidden">
+                  <div className="flex justify-between items-center py-4 px-3 border-b border-gray-100 border-dashed">
+                    <div className="flex">
+                      <span className="text-sm font-medium text-gray-900">
+                        مجموع خرید شما
+                      </span>
+                      <span class="text-sm font-normal text-gray-500 mr-1">
+                        (1 کالا)
+                      </span>
+                    </div>
+                    <div className="flex">
+                      <span className="text-sm font-medium text-gray-900">
+                        ۵۳۵٬۰۰۰
+                      </span>
+                      <span class="text-sm font-normal text-gray-600">
+                        ريال
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center py-4 px-3 border-b border-gray-100 border-dashed">
+                    <div className="flex">
+                      <span className="text-sm font-medium text-gray-900">
+                        سود شما از این خرید
+                      </span>
+                    </div>
+                    <div className="flex">
+                      <span className="text-sm font-medium text-gray-900">
+                        214٬۰۰۰
+                      </span>
+                      <span class="text-sm font-normal text-gray-600">
+                        ريال
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center py-4 px-3 border-b border-gray-100 border-dashed">
+                    <div className="flex">
+                      <span className="text-sm font-medium text-gray-900">
+                        هزینه ارسال
+                      </span>
+                    </div>
+                    <div className="flex">
+                      <span className="text-base font-medium text-gray-900">
+                        رایگان
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center py-4 px-3">
+                    <div className="flex">
+                      <span className="text-sm font-medium text-gray-900">
+                        مبلغ قابل پرداخت
+                      </span>
+                    </div>
+                    <div className="flex">
+                      <span className="text-sm font-medium text-gray-900">
+                        321٬۰۰۰
+                      </span>
+                      <span class="text-sm font-normal text-gray-600">
+                        ريال
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center  px-4 py-3">
+ <Button
+              variant="contained"
+              sx={{
+                width: "fit",
+                fontSize: "14px",
+                height: "36.5px",
+                backgroundColor: "#f01436",
+                borderRadius: "10px",
+                "&:hover": { backgroundColor: "#f01436" },
+                boxShadow: "none !important",
+              }}
+            >
+              انتخاب زمان تحویل
+            </Button>
+            <div className="flex flex-col cursor-pointer select-none">
+            <div className="flex items-center">
+                <span className="text-xs font-normal text-gray-800 ml-1">
+                  جزئیات فاکتور
+                </span>
+
+                 <ExpandMore />
+              </div>
+              <div className="flex gap-2">
+                <span className="text-base font-medium text-gray-900">
+                  ۵۶۲٬۶۰۰
+                </span>
+                <span className="text-sm font-normal text-gray-600"> ريال</span>{" "}
+              </div></div>
+                  </div>
+                </div>
+              </div>
+            </Drawer>
+          </div>
         </Box>
         <Box
           sx={{

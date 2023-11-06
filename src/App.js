@@ -5,6 +5,8 @@ import Product from "./page/Product";
 import PageCart from "./page/PageCart";
 import Factor from "./page/Factor";
 import "./App.css";
+import Store from "./page/Store";
+import CheckOut from "./page/CheckOut";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="/profile-mobile" element={<ProfileMobile />} />
           <Route path="/page-cart" element={<PageCart />} />
           <Route path="/factor" element={<Factor />} />
+          <Route path="/store" element={<Store />} />
+          <Route path="/checkout" element={<CheckOut />} />
         </Routes>
       </BrowserRouter>
     </div>

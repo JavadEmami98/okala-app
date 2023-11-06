@@ -13,15 +13,34 @@ import "./FactorSwiper.css";
 import { Grid, Pagination } from "swiper/modules";
 import CartFactorSwiper from "../Cart/CartFactorSwiper";
 
+const breakpoints = {
+  1024: {
+    slidesPerView: 3,
+    spaceBetween: 10,
+  },
+  768: {
+    slidesPerView: 3,
+    spaceBetween: 10,
+  },
+  680: {
+    slidesPerView: 1,
+    spaceBetween: 10,
+  },
+  0: {
+    slidesPerView: 1,
+    spaceBetween: 10,
+  },
+};
+
 export default function FactorSwiper() {
   return (
     <>
       <Swiper
-        slidesPerView={3}
+        breakpoints={breakpoints}
         grid={{
           rows: 2,
         }}
-        spaceBetween={10}
+
         pagination={false}
         modules={[Grid, Pagination]}
         className="swiper-fac"
