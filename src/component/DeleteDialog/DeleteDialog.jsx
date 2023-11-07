@@ -1,8 +1,8 @@
 import React from "react";
-import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import { Button, Dialog } from "@mui/material";
 import Slide from "@mui/material/Slide";
 import DialogActions from "@mui/material/DialogActions";
+import { AiOutlineDelete } from "react-icons/ai";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -25,9 +25,9 @@ function DeleteDialog() {
   };
   return (
     <div>
-      <DeleteOutlinedIcon
+      <AiOutlineDelete
         onClick={handleClickOpen}
-        sx={{ height: "24px", width: "24px" }}
+        style={{ height: "24px", width: "24px" }}
       />
       <Dialog
         open={open}

@@ -365,9 +365,9 @@ function Factor() {
                 <span className="text-base font-medium text-gray-900">
                   ۵۶۲٬۶۰۰
                 </span>
-                <span className="text-sm font-normal text-gray-600"> ريال</span>{" "}
+                <span className="text-sm font-normal text-gray-600"> ريال</span>
               </div>
-            </div>{" "}
+            </div>
             <Drawer
               anchor={"bottom"}
               open={open}
@@ -436,34 +436,38 @@ function Factor() {
                     </div>
                   </div>
                   <div className="flex justify-between items-center  px-4 py-3">
- <Button
-              variant="contained"
-              sx={{
-                width: "fit",
-                fontSize: "14px",
-                height: "36.5px",
-                backgroundColor: "#f01436",
-                borderRadius: "10px",
-                "&:hover": { backgroundColor: "#f01436" },
-                boxShadow: "none !important",
-              }}
-            >
-              انتخاب زمان تحویل
-            </Button>
-            <div className="flex flex-col cursor-pointer select-none">
-            <div className="flex items-center">
-                <span className="text-xs font-normal text-gray-800 ml-1">
-                  جزئیات فاکتور
-                </span>
+                    <Button
+                      variant="contained"
+                      sx={{
+                        width: "fit",
+                        fontSize: "14px",
+                        height: "36.5px",
+                        backgroundColor: "#f01436",
+                        borderRadius: "10px",
+                        "&:hover": { backgroundColor: "#f01436" },
+                        boxShadow: "none !important",
+                      }}
+                    >
+                      انتخاب زمان تحویل
+                    </Button>
+                    <div className="flex flex-col cursor-pointer select-none">
+                      <div className="flex items-center">
+                        <span className="text-xs font-normal text-gray-800 ml-1">
+                          جزئیات فاکتور
+                        </span>
 
-                 <ExpandMore />
-              </div>
-              <div className="flex gap-2">
-                <span className="text-base font-medium text-gray-900">
-                  ۵۶۲٬۶۰۰
-                </span>
-                <span className="text-sm font-normal text-gray-600"> ريال</span>{" "}
-              </div></div>
+                        <ExpandMore />
+                      </div>
+                      <div className="flex gap-2">
+                        <span className="text-base font-medium text-gray-900">
+                          ۵۶۲٬۶۰۰
+                        </span>
+                        <span className="text-sm font-normal text-gray-600">
+                          {" "}
+                          ريال
+                        </span>{" "}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

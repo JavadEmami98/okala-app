@@ -3,10 +3,11 @@ import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
-import DriveFileRenameOutlineOutlinedIcon from "@mui/icons-material/DriveFileRenameOutlineOutlined";
 import Slide from "@mui/material/Slide";
-import CheckBoxOutlinedIcon from "@mui/icons-material/CheckBoxOutlined";
 import { TransitionProps } from "@mui/material/transitions";
+import { PiPencilSimpleLineLight } from "react-icons/pi";
+import { CgCheckR } from "react-icons/cg";
+
 
 import AddIcon from "@mui/icons-material/Add";
 import { Box, Button } from "@mui/material";
@@ -71,7 +72,7 @@ function LocationDialog() {
 
             <div className="flex flex-col justify-between cursor-pointer p-4 rounded-md border bg-[#e0f2f4] border-[#b0dee0] hover:bg-[#b0dee0]">
               <div className="flex h-[68px]">
-                <CheckBoxOutlinedIcon sx={{ color: "#02a0a4", mr: "8px" }} />
+                <CgCheckR style={{ color: "#02a0a4", marginLeft: "8px",width:"24px",height:"24px" }} />
                 <p>سید رضی 46 پلاک ۳۱۳ - پلاک ۳۱۳ - واحد ۲</p>
               </div>
               <div className="flex items-center justify-between">
@@ -92,8 +93,8 @@ function LocationDialog() {
                       borderRadius: "10px",
                     }}
                   >
-                    <DriveFileRenameOutlineOutlinedIcon
-                      sx={{ height: "24px", width: "24px" }}
+                    <PiPencilSimpleLineLight
+                      style={{ height: "24px", width: "24px" }}
                     />
                   </Box>
                   <Box

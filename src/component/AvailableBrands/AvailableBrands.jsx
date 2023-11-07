@@ -2,7 +2,7 @@ import React from "react";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import { Checkbox, Collapse } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
+import { FiSearch } from "react-icons/fi"
 
 function AvailableBrands() {
   const [open, setOpen] = React.useState(false);
@@ -39,7 +39,7 @@ function AvailableBrands() {
                 className="pr-4"
                 placeholder="... جستجوی نام برند "
               />
-              <SearchIcon
+              <FiSearch
                 sx={{
                   position: "absolute",
                   top: 13,

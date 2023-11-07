@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import StorefrontOutlinedIcon from "@mui/icons-material/StorefrontOutlined";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import HamMenu from "./HamMenu";
 import LocationDialog from "./LocationDialog";
 import Account from "./Account";
 import { Box } from "@mui/material";
 import SearchPosition from "./SearchPosition";
+import { LuShoppingCart } from "react-icons/lu"
+import { PiStorefront } from "react-icons/pi"
 
 function TopHeader() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -41,7 +41,7 @@ function TopHeader() {
               className="ml-10 cursor-pointer"
             />
             <div className="flex items-center rounded-[8px] bg-[#f8f8f8] px-[8px] py-[12px] cursor-pointer">
-              <StorefrontOutlinedIcon sx={{ width: "20px", height: "20px" }} />
+              <PiStorefront style={{ width: "20px", height: "20px" }} />
               <p className="text-sm text-[#363636] pr-1"> مشاهده فروشگاه‌ها</p>
             </div>
           </div>
@@ -53,7 +53,7 @@ function TopHeader() {
                 &nbsp;{" "}
               </div>
               <div className="flex items-center px-[8px] py-[6px] rounded-[10px] hover:bg-[#f8f8f8] mr-4">
-                <ShoppingCartOutlinedIcon />
+                <LuShoppingCart style={{width:"24px",height:"24px"}}/>
                 <div className="flex flex-col items-start pr-3">
                   <p className="text-sm	font-medium text-grey-800 whitespace-nowrap">
                     سبد خرید
