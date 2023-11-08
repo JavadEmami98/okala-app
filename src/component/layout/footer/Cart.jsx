@@ -46,6 +46,7 @@ function Cart() {
                   src="https://cdn.okala.com/media/logo/1"
                   alt=""
                   className="h-[36px] w-[36px]"
+                  loading="lazy"
                 />
               </div>
               <h6 className="text-sm font-medium text-gray-800">
@@ -108,10 +109,10 @@ function Cart() {
           </div>
           <div className="flex items-center select-none gap-2 overflow-x-auto">
             <div className="w-12 h-12 flex justify-center items-center flex-shrink-0">
-              <img src="image/pasta.jpg" alt="" />
+              <img src="image/pasta.jpg" alt="" loading="lazy"/>
             </div>
             <div className="w-12 h-12 flex justify-center items-center flex-shrink-0">
-              <img src="image/cream.jpg" alt="" />
+              <img src="image/cream.jpg" alt="" loading="lazy"/>
             </div>
           </div>
           <div className="w-full flex xs:flex-col sm:flex-row-reverse items-center gap-2">

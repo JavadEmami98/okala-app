@@ -66,7 +66,10 @@ function Profile() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
                       <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center ml-3">
-                        <BsPerson style={{ height: "20px", width: "20px" }} />
+                        <Box
+                          component={BsPerson}
+                          sx={{ height: "20px", width: "20px" }}
+                        />
                       </div>
                       <div className="flex flex-col gap-2 ">
                         <p className="text-[16px] text-[#e0f2f4] text-start">
@@ -82,13 +85,15 @@ function Profile() {
                 </Box>
                 <div className="flex justify-between items-center mt-5">
                   <div className="flex items-center">
-                    <CiWallet
-                      style={{
+                    <Box
+                      component={CiWallet}
+                      sx={{
                         color: "rgb(2, 160, 164)",
                         width: "24px",
                         height: "24px",
                       }}
                     />
+
                     <p className="text-[14px]">کیف پول</p>
                   </div>
                   <div className="flex items-center">
@@ -110,8 +115,9 @@ function Profile() {
                 <li className="py-[16px] hover:bg-gray-50 px-[12px] rounded-[10px] border-b border-[#f8f8f8]">
                   <div className="flex items-center justify-between w-full p-2">
                     <div className="flex items-center gap-2">
-                      <CgNotes
-                        style={{
+                      <Box
+                        component={CgNotes}
+                        sx={{
                           color: "rgb(2, 160, 164)",
                           width: "24px",
                           height: "24px",
@@ -127,8 +133,9 @@ function Profile() {
                 <li className="py-[16px] hover:bg-gray-50 px-[12px] rounded-[10px] border-b border-[#f8f8f8]">
                   <div className="flex items-center justify-between w-full p-2">
                     <div className="flex items-center gap-2">
-                      <HiOutlineLocationMarker
-                        style={{
+                      <Box
+                        component={HiOutlineLocationMarker}
+                        sx={{
                           color: "rgb(2, 160, 164)",
                           width: "24px",
                           height: "24px",
@@ -144,13 +151,15 @@ function Profile() {
                 <li className="py-[16px] hover:bg-gray-50 px-[12px] rounded-[10px] border-b border-[#f8f8f8]">
                   <div className="flex items-center justify-between w-full p-2">
                     <div className="flex items-center gap-2">
-                      <CiDiscount1
-                        style={{
+                      <Box
+                        component={CiDiscount1}
+                        sx={{
                           color: "rgb(2, 160, 164)",
                           width: "24px",
                           height: "24px",
                         }}
                       />
+
                       <p className="text-base">کدهای تخفیف من </p>
                     </div>
                     <NavigateBeforeOutlinedIcon
@@ -161,8 +170,9 @@ function Profile() {
                 <li className="py-[16px] hover:bg-gray-50 px-[12px] rounded-[10px] border-b border-[#f8f8f8]">
                   <div className="flex items-center justify-between w-full p-2">
                     <div className="flex items-center gap-2">
-                      <IoCallOutline
-                        style={{
+                      <Box
+                        component={IoCallOutline}
+                        sx={{
                           color: "rgb(2, 160, 164)",
                           width: "24px",
                           height: "24px",
@@ -178,8 +188,9 @@ function Profile() {
                 <li className="py-[16px] hover:bg-gray-50 px-[12px] rounded-[10px]">
                   <div className="flex items-center justify-between w-full p-2">
                     <div className="flex items-center gap-2">
-                      <IoLogOutOutline
-                        style={{
+                      <Box
+                        component={IoLogOutOutline}
+                        sx={{
                           color: "rgb(240, 20, 54)",
                           width: "24px",
                           height: "24px",
@@ -209,12 +220,12 @@ function Profile() {
               className="w-full"
             >
               <div className="flex items-center mb-4">
-              <div className=" border-l-[4px] border-[#7cc8cc] rounded-[100px] h-[16px] ml-[16px]"></div>
-              <h6 className="text-lg font-medium text-gray-900">
-              تماس با پشتیبانی
-              </h6>
+                <div className=" border-l-[4px] border-[#7cc8cc] rounded-[100px] h-[16px] ml-[16px]"></div>
+                <h6 className="text-lg font-medium text-gray-900">
+                  تماس با پشتیبانی
+                </h6>
               </div>
-              <TabProfile/>
+              <TabProfile />
             </Box>
           </div>
         </div>

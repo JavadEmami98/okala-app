@@ -115,7 +115,10 @@ function CheckOut() {
                       height: "39.6px",
                     }}
                   >
-                    <PiPencilSimpleLineBold style={{ color: "#363636" }} />
+                    <Box
+                      component={PiPencilSimpleLineBold}
+                      sx={{ color: "#363636" }}
+                    />
                     <span className="text-base font-normal text-gray-900 mr-2 ml-1">
                       ویرایش
                     </span>
@@ -143,7 +146,10 @@ function CheckOut() {
                         height: "36px",
                       }}
                     >
-                      <PiPencilSimpleLineBold style={{ color: "#363636" }} />
+                      <Box
+                        component={PiPencilSimpleLineBold}
+                        sx={{ color: "#363636" }}
+                      />
                       <span className="text-sm font-normal text-gray-800 mr-2">
                         ویرایش
                       </span>
@@ -214,7 +220,11 @@ function CheckOut() {
                     fontSize: "1rem",
                   }}
                 >
-                  <CiDiscount1 style={{ width: "22px", height: "22px" }} />
+                  <Box
+                    component={CiDiscount1}
+                    sx={{ width: "22px", height: "22px" }}
+                  />
+
                   <span className="mr-2 text-sm">وارد کردن</span>
                 </Button>
               </div>
@@ -325,7 +335,10 @@ function CheckOut() {
                 </div>
                 <div className="flex items-center justify-between w-full p-2 mt-4 rounded-lg bg-gray-50 mb-9">
                   <div className="flex items-center">
-                    <CiDiscount1 style={{ height: "22px", width: "22px" }} />
+                    <Box
+                      component={CiDiscount1}
+                      sx={{ width: "22px", height: "22px" }}
+                    />
                     <p className="mr-2 text-sm font-normal text-gray-800">
                       کد تخفیف دارید؟
                     </p>

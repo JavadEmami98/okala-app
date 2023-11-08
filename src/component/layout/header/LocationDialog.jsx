@@ -5,13 +5,13 @@ import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
-import { PiPencilSimpleLineLight } from "react-icons/pi";
-import { CgCheckR } from "react-icons/cg";
 
+import { CgCheckR } from "react-icons/cg";
 
 import AddIcon from "@mui/icons-material/Add";
 import { Box, Button } from "@mui/material";
 import DeleteDialog from "../../DeleteDialog/DeleteDialog";
+import EditMap from "../../EditMap/EditMap";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -72,7 +72,16 @@ function LocationDialog() {
 
             <div className="flex flex-col justify-between cursor-pointer p-4 rounded-md border bg-[#e0f2f4] border-[#b0dee0] hover:bg-[#b0dee0]">
               <div className="flex h-[68px]">
-                <CgCheckR style={{ color: "#02a0a4", marginLeft: "8px",width:"24px",height:"24px" }} />
+                <Box
+                  component={CgCheckR}
+                  sx={{
+                    color: "#02a0a4",
+                    marginLeft: "8px",
+                    width: "24px",
+                    height: "24px",
+                  }}
+                />
+
                 <p>سید رضی 46 پلاک ۳۱۳ - پلاک ۳۱۳ - واحد ۲</p>
               </div>
               <div className="flex items-center justify-between">
@@ -93,9 +102,7 @@ function LocationDialog() {
                       borderRadius: "10px",
                     }}
                   >
-                    <PiPencilSimpleLineLight
-                      style={{ height: "24px", width: "24px" }}
-                    />
+                    <EditMap />
                   </Box>
                   <Box
                     variant="outlined"
@@ -112,8 +119,7 @@ function LocationDialog() {
                       borderRadius: "10px",
                     }}
                   >
-                   
-                    <DeleteDialog/>
+                    <DeleteDialog />
                   </Box>
                 </div>
               </div>

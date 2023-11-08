@@ -1,7 +1,7 @@
 import React from "react";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import { Button, Collapse, Slider } from "@mui/material";
+import { Box, Button, Collapse, Slider } from "@mui/material";
 
 function FilterPrice() {
   const [open, setOpen] = React.useState(false);
@@ -17,9 +17,9 @@ function FilterPrice() {
   };
   return (
     <div>
-      <div
+      <Box
+        sx={{ boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px" }}
         className="mb-3 rounded-xl p-4 max-h-[280px] min-h-[54px] flex flex-col transition-all duration-300"
-        style={{ boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px" }}
       >
         <div
           onClick={handleClick}
@@ -93,7 +93,7 @@ function FilterPrice() {
             </div>
           </div>
         </Collapse>
-      </div>
+      </Box>
     </div>
   );
 }

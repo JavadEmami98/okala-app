@@ -9,6 +9,7 @@ function CartFactorSwiper() {
           <img
             src="https://cdn.okala.com/media/index/Product/133652/500/500"
             alt=""
+            loading="lazy"
             className="w-[42px] h-[42px]"
           />
         </div>

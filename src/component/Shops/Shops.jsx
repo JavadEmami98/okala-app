@@ -28,6 +28,7 @@ function Shops() {
                   <img
                     src="https://cdn.okala.com/Media/logo/1/200/200"
                     alt=""
+                    loading="lazy"
                     className="h-[64px] w-[64px]"
                   />
                 </div>
@@ -65,6 +66,7 @@ function Shops() {
                   <img
                     src="https://cdn.okala.com/Media/logo/1/200/200"
                     alt=""
+                    loading="lazy"
                     className="h-[64px] w-[64px]"
                   />
                 </div>
@@ -102,6 +104,7 @@ function Shops() {
                   <img
                     src="https://cdn.okala.com/Media/logo/1/200/200"
                     alt=""
+                    loading="lazy"
                     className="h-[64px] w-[64px]"
                   />
                 </div>

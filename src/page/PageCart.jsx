@@ -93,6 +93,7 @@ function PageCart() {
                       <img
                         src="https://cdn.okala.com/media/logo/1"
                         alt=""
+                        loading="lazy"
                         className="w-[48px] h-[48px]"
                       />
                     </div>
@@ -106,7 +107,7 @@ function PageCart() {
                 </div>
                 <div className="flex items-center select-none gap-2 overflow-x-auto">
                   <div className="w-12 h-12 flex justify-center items-center flex-shrink-0">
-                    <img src="image/rob.jpg" alt="" />
+                    <img src="image/rob.jpg" alt="" loading="lazy"/>
                   </div>
                 </div>
                 <div className="w-full flex items-center gap-2">
@@ -164,6 +165,7 @@ function PageCart() {
                 <img
                   src="https://cdn.okala.com/media/logo/1"
                   alt=""
+                  loading="lazy"
                   className="w-[48px] h-[48px]"
                 />
               </div>
@@ -177,7 +179,7 @@ function PageCart() {
           </div>
           <div className="flex items-center select-none gap-2 overflow-x-auto">
             <div className="w-12 h-12 flex justify-center items-center flex-shrink-0">
-              <img src="image/rob.jpg" alt="" />
+              <img src="image/rob.jpg" alt="" loading="lazy"/>
             </div>
           </div>
           <div className="w-full flex items-center gap-2">
@@ -221,6 +223,7 @@ function PageCart() {
                 <img
                   src="https://cdn.okala.com/media/logo/1"
                   alt=""
+                  loading="lazy"
                   className="w-[48px] h-[48px]"
                 />
               </div>
@@ -234,7 +237,7 @@ function PageCart() {
           </div>
           <div className="flex items-center select-none gap-2 overflow-x-auto">
             <div className="w-12 h-12 flex justify-center items-center flex-shrink-0">
-              <img src="image/rob.jpg" alt="" />
+              <img src="image/rob.jpg" alt="" loading="lazy"/>
             </div>
           </div>
           <div className="w-full flex items-center gap-2">

@@ -1,5 +1,5 @@
 import { Box, Collapse, Switch } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import HeaderOkala from "../component/layout/header/HeaderOkala";
 import HeaderMobile from "../component/layout/header/HeaderMobile";
 import SwapVertIcon from "@mui/icons-material/SwapVert";
@@ -64,6 +64,10 @@ const data = [
 ];
 
 function Product() {
+  const [activeItem, setActiveItem] = useState("");
+  const handleClick2 = (item) => {
+    setActiveItem(item);
+  };
   const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
@@ -105,9 +109,9 @@ function Product() {
           {/* Right */}
           <div className="max-w-[324px] min-w-[280px] pl-4">
             <div className="sticky  top-28">
-              <div
+              <Box
+                sx={{ boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px" }}
                 className="mb-3 rounded-xl p-4 max-h-[280px] min-h-[54px] flex flex-col transition-all duration-300"
-                style={{ boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px" }}
               >
                 <div className="h-[33px] flex justify-between items-center mb-3 relative">
                   <p className="border-r-4 border-[#02a0a4] border-opacity-70 pr-1 text-sm font-medium">
@@ -117,10 +121,10 @@ function Product() {
                     <span className="text-xs text-red-600">حذف همه</span>
                   </button>
                 </div>
-              </div>
-              <div
+              </Box>
+              <Box
+                sx={{ boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px" }}
                 className="mb-3 rounded-xl p-4 max-h-[280px] min-h-[54px] flex flex-col transition-all duration-300"
-                style={{ boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px" }}
               >
                 <div
                   onClick={handleClick}
@@ -164,19 +168,19 @@ function Product() {
                     <span className="text-gray-400 mr-1.5 text-xs">(77)</span>
                   </div>
                 </Collapse>
-              </div>
+              </Box>
               {/* Brand mojud */}
               <AvailableBrands />
               {/* kala mojud */}
-              <div
+              <Box
+                sx={{ boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px" }}
                 className="mb-3 rounded-xl p-4 max-h-[280px] min-h-[54px] flex flex-col transition-all duration-300"
-                style={{ boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px" }}
               >
                 <div className="flex items-center">
                   <Switch color="error" />
                   <p className="text-[.875rem]">فقط کالاهای موجود</p>
                 </div>
-              </div>
+              </Box>
               {/* Filter gheymat */}
               <FilterPrice />
             </div>
@@ -191,8 +195,10 @@ function Product() {
               <ul>
                 <li className="inline-block px-2 cursor-pointer">
                   <p
+                    onClick={() => handleClick2("home")}
+                    style={{ color: activeItem === "home" ? "green" : "black" }}
                     className="
-                        px-3 py-2 rounded-lg text-[#02a0a4] bg-[#02a0a40a]
+                        px-3 py-2 rounded-lg text-[#02a0a4] bg-[#02a0a40a] text-[14px] font-medium
                         "
                   >
                     پرفروشترین
@@ -200,8 +206,10 @@ function Product() {
                 </li>
                 <li className="inline-block px-2 cursor-pointer">
                   <p
+                    onClick={() => handleClick2("most")}
+                    style={{ color: activeItem === "most" ? "green" : "black" }}
                     className="
-                        px-3 py-2 rounded-lg 
+                        px-3 py-2 rounded-lg  text-[14px] font-medium
                         "
                   >
                     بیشترین تخفیف
@@ -209,29 +217,39 @@ function Product() {
                 </li>
                 <li className="inline-block px-2 cursor-pointer">
                   <p
+                    onClick={() => handleClick2("new")}
+                    style={{ color: activeItem === "new" ? "green" : "black" }}
                     className="
-                        px-3 py-2 rounded-lg 
+                        px-3 py-2 rounded-lg  text-[14px] font-medium
                         "
                   >
-                    جدیدترین{" "}
+                    جدیدترین
                   </p>
                 </li>
                 <li className="inline-block px-2 cursor-pointer">
                   <p
+                    onClick={() => handleClick2("cheap")}
+                    style={{
+                      color: activeItem === "cheap" ? "green" : "black",
+                    }}
                     className="
-                        px-3 py-2 rounded-lg 
+                        px-3 py-2 rounded-lg  text-[14px] font-medium
                         "
                   >
-                    ارزانترین{" "}
+                    ارزانترین
                   </p>
                 </li>
                 <li className="inline-block px-2 cursor-pointer">
                   <p
+                    onClick={() => handleClick2("expensive")}
+                    style={{
+                      color: activeItem === "expensive" ? "green" : "black",
+                    }}
                     className="
-                        px-3 py-2 rounded-lg 
+                        px-3 py-2 rounded-lg  text-[14px] font-medium
                         "
                   >
-                    گرانترین{" "}
+                    گرانترین
                   </p>
                 </li>
               </ul>

@@ -1,8 +1,8 @@
 import React from "react";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import { Checkbox, Collapse } from "@mui/material";
-import { FiSearch } from "react-icons/fi"
+import { Box, Checkbox, Collapse } from "@mui/material";
+import { FiSearch } from "react-icons/fi";
 
 function AvailableBrands() {
   const [open, setOpen] = React.useState(false);
@@ -12,9 +12,9 @@ function AvailableBrands() {
   };
   return (
     <div>
-      <div
+      <Box
+        sx={{ boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px" }}
         className="mb-3 rounded-xl p-4 max-h-[280px] min-h-[54px] flex flex-col transition-all duration-300"
-        style={{ boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px" }}
       >
         <div
           onClick={handleClick}
@@ -62,7 +62,7 @@ function AvailableBrands() {
             </div>
           </div>
         </Collapse>
-      </div>
+      </Box>
     </div>
   );
 }

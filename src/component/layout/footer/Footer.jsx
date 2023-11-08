@@ -1,9 +1,9 @@
-import { Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import React from "react";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import TelegramIcon from "@mui/icons-material/Telegram";
-import GroupWorkIcon from "@mui/icons-material/GroupWork";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import { RiTelegramLine } from "react-icons/ri";
+import { LuTwitter } from "react-icons/lu";
+import { SiAparat } from "react-icons/si";
 
 function Footer() {
   return (
@@ -54,23 +54,26 @@ function Footer() {
                 <h1 className="font-medium">تماس با ما</h1>
                 <p className="font-normal text-sm my-3 text-gray-600">
                   تماس با پشتیبانی :
-                  <span className="text-teal-400 font-medium mr-1">1536</span>
+                  <span className="text-[#02a0a4] font-medium mr-1">1536</span>
                 </p>
                 <div className="grid grid-cols-4">
                   <div className="h-6 w-6 flex items-center justify-center ml-4">
-                    <GroupWorkIcon
-                      sx={{ color: "#686868", width: "20px", height: "20px" }}
+                    <Box
+                      component={SiAparat}
+                      sx={{ color: "#686868", width: "16px", height: "16px" }}
                     />
                   </div>
 
                   <div className="h-6 w-6 flex items-center justify-center ml-4">
-                    <TelegramIcon
+                    <Box
+                      component={RiTelegramLine}
                       sx={{ color: "#686868", width: "20px", height: "20px" }}
                     />
                   </div>
                   <div className="h-6 w-6 flex items-center justify-center ml-4">
-                    <TwitterIcon
-                      sx={{ color: "#686868", width: "20px", height: "20px" }}
+                    <Box
+                      component={LuTwitter}
+                      sx={{ color: "#686868", width: "18px", height: "18px" }}
                     />
                   </div>
                   <div className="h-6 w-6 flex items-center justify-center ml-4">
@@ -87,6 +90,7 @@ function Footer() {
                     <img
                       src="https://logo.samandehi.ir/logo.aspx?id=105734&p=nbpdlymaujynyndtqftishwl"
                       alt=""
+                      loading="lazy"
                       className="h-[40px] w-[40px] object-cover"
                     />
                   </div>
@@ -94,14 +98,16 @@ function Footer() {
                     <img
                       src="https://cdn.okala.com/unsigned/rs:fill/size:0:0/plain/s3:/cdn/static/ecunionLogo.png"
                       alt=""
+                      loading="lazy"
                       className="h-[40px] w-[40px] object-cover"
                     />
                   </div>
                   <div className="flex justify-center items-center border rounded-lg border-gray-200 ml-3 p-1 h-[60px] w-[60px]">
                     <img
-                      src="https://cdn.okala.com/unsigned/rs:fill/size:0:0/plain/s3:/cdn/static/ecunionLogo.png"
+                      src="/image/footer-pic3.png"
                       alt=""
-                      className="h-[40px] w-[40px] object-cover"
+                      loading="lazy"
+                      className="h-[50px] w-[40px] object-cover"
                     />
                   </div>
                 </div>
@@ -109,8 +115,9 @@ function Footer() {
             </div>
             <div className="flex flex-row justify-center items-center py-4">
               <img
-                src="https://cdn.okala.com/unsigned/rs:fill/size:0:0/plain/s3:/cdn/static/Okala-logo-grey.svg"
+                src="/image/logo-okala-footer.svg"
                 alt=""
+                loading="lazy"
                 className="h-[16px] w-[24px] object-cover"
               />
               <p className="text-gray-500 text-sm font-normal">

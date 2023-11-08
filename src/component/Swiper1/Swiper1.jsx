@@ -37,34 +37,19 @@ export default function Swiper1() {
         className="relative group"
       >
         <SwiperSlide className="swiper-slide-1">
-          <img
-            src="https://cdn.okala.com/Media/Index_v2/Slider/500502"
-            alt=""
-          />
+          <img src="/image/swiper1-1.jpg" alt="" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide className="swiper-slide-1">
-          <img
-            src="https://cdn.okala.com/Media/Index_v2/Slider/500436"
-            alt=""
-          />
+          <img src="/image/swiper1-2.jpg" alt="" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide className="swiper-slide-1">
-          <img
-            src="https://cdn.okala.com/Media/Index_v2/Slider/500437"
-            alt=""
-          />
+          <img src="/image/swiper1-3.jpg" alt="" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide className="swiper-slide-1">
-          <img
-            src="https://cdn.okala.com/Media/Index_v2/Slider/500459"
-            alt=""
-          />
+          <img src="/image/swiper1-4.jpg" alt="" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide className="swiper-slide-1">
-          <img
-            src="https://cdn.okala.com/Media/Index_v2/Slider/500470"
-            alt=""
-          />
+          <img src="/image/swiper1-5.jpg" alt="" loading="lazy" />
         </SwiperSlide>
         <div className="absolute md:flex hidden sm:hidden lg:flex items-center justify-center rounded-[50%]  h-[48px] w-[48px] bg-[#fff] right-6  top-[46%] z-10  button-prev-slide ">
           <ArrowForwardIosIcon

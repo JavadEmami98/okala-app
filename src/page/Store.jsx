@@ -48,7 +48,7 @@ function Store() {
         <div className="flex flex-col px-4 py-4 md:flex-row md:justify-between md:items-center">
           <div className="flex items-center pb-4">
             <div className="flex justify-center items-center border border-gray-100 rounded-full  h-[80px] w-[80px]">
-              <img src="/image/ok.png" alt="" className="h-[46px] w-[46px]" />
+              <img src="/image/ok.png" alt="" loading="lazy" className="h-[46px] w-[46px]" />
             </div>
             <div className="flex flex-col mr-1">
               <p className="text-base text-start md:text-lg text-gray-800 font-bold mr-3 whitespace-nowrap">
@@ -93,14 +93,14 @@ function Store() {
                 تحویل در 25 دقیقه
               </span>
             </div>
-            <div
+            <Box
               className="border-l"
-              style={{
+              sx={{
                 height: " 48px",
                 width: "1px",
                 color: "rgba(230, 230, 230, 1)",
               }}
-            ></div>
+            ></Box>
 
             <div className="flex flex-col justify-center items-center   md:px-11">
               <div className="flex">
@@ -113,14 +113,14 @@ function Store() {
               </div>
               <span className="text-green-800 font-bold text-sm">رایگان</span>
             </div>
-            <div
+            <Box
               className="border-l"
-              style={{
+              sx={{
                 height: " 48px",
                 width: "1px",
                 color: "rgba(230, 230, 230, 1)",
               }}
-            ></div>
+            ></Box>
             <div className="flex flex-col justify-center items-center md:px-11">
               <div className="flex">
                 <StarBorderPurple500OutlinedIcon

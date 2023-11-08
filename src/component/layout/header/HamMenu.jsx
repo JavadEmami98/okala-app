@@ -25,14 +25,15 @@ function HamMenu() {
           <div className="w-[307px] h-full relative">
             <div className="flex items-center justify-center py-2 shadow-sm">
               <img
-                src="https://okala.com/static/images/icons/logo-okala2.svg"
+                src="/image/logo-okala-h.svg"
                 alt=""
+                loading="lazy"
                 className="h-[49px] object-cover"
               />
               <CloseIcon
                 className="absolute top-2 left-2"
                 onClick={() => setOpen(false)}
-                sx={{ opacity: "50%", color: "#000000" }}
+                sx={{ opacity: "50%", color: "#000000",cursor:"pointer" }}
               />
             </div>
             <div className="p-4">

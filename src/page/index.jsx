@@ -10,6 +10,7 @@ import Swiper2 from "../component/Swiper2/Swiper2";
 import SwiperProduct from "../component/SwiperProduct/SwiperProduct";
 import Shops from "../component/Shops/Shops";
 import Grouping from "../component/Grouping/Grouping";
+import Banner from "../component/Banner/Banner";
 
 const item1 = [
   {
@@ -100,18 +101,9 @@ function Index() {
           <SwiperProduct title={"کالاهای روز و تازه"} data={item1} />
           <SwiperProduct title={" محصولات گیاهخواری  "} data={item1} />
           <SwiperProduct title={"  خرید به‌صرفه  "} data={item1} />
-          <img
-            src="https://cdn.okala.com/Media/Index_v2/Slider/500494"
-            alt=""
-            className="rounded-[0.5rem]"
-          />
+          <Banner />
           <Shops />
           <Grouping />
-          <img
-            src="https://cdn.okala.com/Media/Index_v2/Slider/500504"
-            alt=""
-            className="rounded-[0.5rem] mb-5"
-          />
         </div>
       </main>
       <footer>

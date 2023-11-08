@@ -4,8 +4,8 @@ import LocationDialog from "./LocationDialog";
 import Account from "./Account";
 import { Box } from "@mui/material";
 import SearchPosition from "./SearchPosition";
-import { LuShoppingCart } from "react-icons/lu"
-import { PiStorefront } from "react-icons/pi"
+import { LuShoppingCart } from "react-icons/lu";
+import { PiStorefront } from "react-icons/pi";
 
 function TopHeader() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -25,7 +25,7 @@ function TopHeader() {
     <Box
       sx={{
         /*   borderBottom: " 2px solid rgba(0, 0, 0, 0.12)", */
-       /*  top: scrollPosition > 150 ? {color:"red"} : "-1px", */
+        /*  top: scrollPosition > 150 ? {color:"red"} : "-1px", */
         transition: "all 300ms ease",
       }}
       className="fixed bg-white z-40  right-0 left-0 "
@@ -38,14 +38,25 @@ function TopHeader() {
             <img
               src="https://okala.com/static/images/icons/logo-okala2.svg"
               alt=""
+              loading="lazy"
               className="ml-10 cursor-pointer"
             />
             <div className="flex items-center rounded-[8px] bg-[#f8f8f8] px-[8px] py-[12px] cursor-pointer">
-              <PiStorefront style={{ width: "20px", height: "20px" }} />
+              <Box
+                component={PiStorefront}
+                sx={{ width: "20px", height: "20px" }}
+              />
+
               <p className="text-sm text-[#363636] pr-1"> مشاهده فروشگاه‌ها</p>
             </div>
           </div>
-         {scrollPosition > 200 ? (<SearchPosition/> ):(<><LocationDialog /></>)}
+          {scrollPosition > 200 ? (
+            <SearchPosition />
+          ) : (
+            <>
+              <LocationDialog />
+            </>
+          )}
           <div>
             <div className="flex items-center">
               <Account />
@@ -53,7 +64,11 @@ function TopHeader() {
                 &nbsp;{" "}
               </div>
               <div className="flex items-center px-[8px] py-[6px] rounded-[10px] hover:bg-[#f8f8f8] mr-4">
-                <LuShoppingCart style={{width:"24px",height:"24px"}}/>
+                <Box
+                  component={LuShoppingCart}
+                  sx={{ width: "24px", height: "24px" }}
+                />
+
                 <div className="flex flex-col items-start pr-3">
                   <p className="text-sm	font-medium text-grey-800 whitespace-nowrap">
                     سبد خرید

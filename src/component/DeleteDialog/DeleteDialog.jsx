@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Dialog } from "@mui/material";
+import { Box, Button, Dialog } from "@mui/material";
 import Slide from "@mui/material/Slide";
 import DialogActions from "@mui/material/DialogActions";
 import { AiOutlineDelete } from "react-icons/ai";
@@ -25,9 +25,10 @@ function DeleteDialog() {
   };
   return (
     <div>
-      <AiOutlineDelete
+      <Box
         onClick={handleClickOpen}
-        style={{ height: "24px", width: "24px" }}
+        component={AiOutlineDelete}
+        sx={{ height: "24px", width: "24px" }}
       />
       <Dialog
         open={open}

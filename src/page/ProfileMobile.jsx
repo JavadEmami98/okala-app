@@ -10,8 +10,6 @@ import { IoLogOutOutline } from "react-icons/io5";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { BsPerson } from "react-icons/bs";
 
-
-
 function ProfileMobile() {
   return (
     <div>
@@ -36,7 +34,10 @@ function ProfileMobile() {
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center ml-3">
-                <BsPerson style={{height:"20px",width:"20px"}}/>
+                <Box
+                  component={BsPerson}
+                  sx={{ height: "20px", width: "20px" }}
+                />
               </div>
               <div className="flex flex-col gap-2 ">
                 <p className="text-[16px] text-[#e0f2f4] text-start">
@@ -59,8 +60,13 @@ function ProfileMobile() {
             }}
           >
             <div className="flex items-center gap-2">
-              <CiWallet
-                style={{ color: "rgb(2, 160, 164)",width:"24px",height:"24px"  }}
+              <Box
+                component={CiWallet}
+                sx={{
+                  color: "rgb(2, 160, 164)",
+                  width: "24px",
+                  height: "24px",
+                }}
               />
               <p className="text-[14px]">کیف پول</p>
             </div>
@@ -76,7 +82,15 @@ function ProfileMobile() {
           <li className="hover:bg-grey-50 border-b border-[rgba(248, 248, 248, 1)] py-4 px-3">
             <div className="flex items-center justify-between w-full p-2">
               <div className="flex items-center gap-2">
-                <CgNotes style={{ color: "rgb(2, 160, 164)",width:"24px",height:"24px" }} />
+                <Box
+                  component={CgNotes}
+                  sx={{
+                    color: "rgb(2, 160, 164)",
+                    width: "24px",
+                    height: "24px",
+                  }}
+                />
+
                 <p className="text-base"> سفارش‌های من </p>
               </div>
               <NavigateBeforeOutlinedIcon
@@ -87,7 +101,15 @@ function ProfileMobile() {
           <li className="hover:bg-grey-50 border-b border-[rgba(248, 248, 248, 1)] py-4 px-3">
             <div className="flex items-center justify-between w-full p-2">
               <div className="flex items-center gap-2">
-                <HiOutlineLocationMarker style={{ color: "rgb(2, 160, 164)",width:"24px",height:"24px" }} />
+                <Box
+                  component={HiOutlineLocationMarker}
+                  sx={{
+                    color: "rgb(2, 160, 164)",
+                    width: "24px",
+                    height: "24px",
+                  }}
+                />
+
                 <p className="text-base"> آدرس‌های من </p>
               </div>
               <NavigateBeforeOutlinedIcon
@@ -98,7 +120,15 @@ function ProfileMobile() {
           <li className="hover:bg-grey-50 border-b border-[rgba(248, 248, 248, 1)] py-4 px-3">
             <div className="flex items-center justify-between w-full p-2">
               <div className="flex items-center gap-2">
-                <CiDiscount1 style={{ color: "rgb(2, 160, 164)",width:"24px",height:"24px" }} />
+                <Box
+                  component={CiDiscount1}
+                  sx={{
+                    color: "rgb(2, 160, 164)",
+                    width: "24px",
+                    height: "24px",
+                  }}
+                />
+
                 <p className="text-base">کدهای تخفیف من </p>
               </div>
               <NavigateBeforeOutlinedIcon
@@ -109,7 +139,15 @@ function ProfileMobile() {
           <li className="hover:bg-grey-50 border-b border-[rgba(248, 248, 248, 1)] py-4 px-3">
             <div className="flex items-center justify-between w-full p-2">
               <div className="flex items-center gap-2">
-                <IoCallOutline style={{ color: "rgb(2, 160, 164)",width:"24px",height:"24px"  }} />
+                <Box
+                  component={IoCallOutline}
+                  sx={{
+                    color: "rgb(2, 160, 164)",
+                    width: "24px",
+                    height: "24px",
+                  }}
+                />
+
                 <p className="text-base"> تماس با پشتیبانی </p>
               </div>
               <NavigateBeforeOutlinedIcon
@@ -120,7 +158,14 @@ function ProfileMobile() {
           <li className="hover:bg-grey-50 border-b border-[rgba(248, 248, 248, 1)] py-4 px-3">
             <div className="flex items-center justify-between w-full p-2">
               <div className="flex items-center gap-2">
-                <IoLogOutOutline style={{ color: "rgb(240, 20, 54)",width:"24px",height:"24px"  }}/>
+                <Box
+                  component={IoLogOutOutline}
+                  sx={{
+                    color: "rgb(240, 20, 54)",
+                    width: "24px",
+                    height: "24px",
+                  }}
+                />
                 <p className="text-base"> خروج از حساب </p>
               </div>
             </div>

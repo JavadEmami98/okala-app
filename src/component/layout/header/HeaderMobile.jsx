@@ -25,6 +25,7 @@ function HeaderMobile() {
         <img
           src="https://okala.com/static/images/icons/logo-okala2.svg"
           alt=""
+          loading="lazy"
           className="h-[30px] w-[56px]"
         />
       </div>

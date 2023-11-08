@@ -182,3 +182,23 @@ code {
 .css-19kzrtu {
   padding: 0px !important;
 }
+
+.green {
+  background-color: #02a0a40a !important;
+  color: #02a0a4;
+  border-radius: 8px;
+  font-size: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.black {
+  color: #000000;
+}
+
+
+/* Icons */
+.close-icon {
+  color: red !important;
+  background-color: red;
+}

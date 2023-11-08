@@ -90,9 +90,11 @@ export default function TabProfile() {
             <div className="absolute flex justify-between w-full px-6 py-4 text-white">
               <div>
                 <div className="flex text-sm">
-                  <LuPhoneCall
-                    style={{ width: "20px", height: "20px", marginTop: "3px" }}
+                  <Box
+                    component={LuPhoneCall}
+                    sx={{ width: "20px", height: "20px", marginTop: "3px" }}
                   />
+
                   <p className="mr-2 text-base">مرکز تماس امور مشتریان</p>
                 </div>
                 <div className="text-xl text-start tel mr-11 mt-1">1536</div>
@@ -188,8 +190,9 @@ export default function TabProfile() {
                 color: "#000000de",
               }}
             >
-              <MdOutlineUploadFile
-                style={{
+              <Box
+                component={MdOutlineUploadFile}
+                sx={{
                   width: "20px",
                   height: "20px",
                   marginLeft: "10px",
@@ -215,8 +218,9 @@ export default function TabProfile() {
             <div className="absolute flex justify-between w-full px-6 py-4 text-white">
               <div>
                 <div className="flex text-sm">
-                  <LuPhoneCall
-                    style={{ width: "20px", height: "20px", marginTop: "3px" }}
+                  <Box
+                    component={LuPhoneCall}
+                    sx={{ width: "20px", height: "20px", marginTop: "3px" }}
                   />
                   <p className="mr-2 text-base">مرکز تماس امور مشتریان</p>
                 </div>

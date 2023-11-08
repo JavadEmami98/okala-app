@@ -71,49 +71,25 @@ function Swiper2() {
         <div className="relative flex flex-col items-center w-full min-h-[300px] md:px-2 pb-5 md:pb-4 overflow-hidden">
           <div className="w-full flex flex-col md:flex-row justify-center items-center px-4 lg:px-6 mb-8">
             <div className="flex flex-row-reverse items-center mb-4 md:mb-0 md:ml-4 font-black">
-              <span
-                className="flex items-center justify-center w-10 h-10 text-white rounded-md"
-                style={{ backgroundColor: "rgb(235, 30, 39)" }}
-              >
+              <span className="flex items-center justify-center w-10 h-10 text-white rounded-md bg-[#eb1e27]">
                 00
               </span>
-              <span
-                className="mx-2 duration-1000 ease-linear animate-pulse"
-                style={{ color: " rgb(235, 30, 39)" }}
-              >
+              <span className="mx-2 duration-1000 ease-linear animate-pulse text-[#eb1e27]">
                 :
               </span>
-              <span
-                className="flex items-center justify-center w-10 h-10 text-white rounded-md"
-                style={{ backgroundColor: "rgb(235, 30, 39)" }}
-              >
+              <span className="flex items-center justify-center w-10 h-10 text-white rounded-md bg-[#eb1e27]">
                 77
               </span>
-              <span
-                className="mx-2 duration-1000 ease-linear animate-pulse"
-                style={{ color: " rgb(235, 30, 39)" }}
-              >
+              <span className="mx-2 duration-1000 ease-linear animate-pulse text-[#eb1e27]">
                 :
               </span>
-              <span
-                className="flex items-center justify-center w-10 h-10 text-white rounded-md"
-                style={{ backgroundColor: "rgb(235, 30, 39)" }}
-              >
+              <span className="flex items-center justify-center w-10 h-10 text-white rounded-md bg-[#eb1e27]">
                 37
               </span>
             </div>
             <div className="relative flex flex-grow w-full h-1 lg:mr-4 rounded-full">
-              <span
-                className="absolute top-0 right-0 w-full h-1 rounded-full opacity-20"
-                style={{ backgroundColor: "rgb(235, 30, 39)" }}
-              ></span>
-              <span
-                className="absolute top-0 right-0 z-10 h-1 rounded-full"
-                style={{
-                  backgroundColor: " rgb(235, 30, 39)",
-                  width: "21.7222%",
-                }}
-              ></span>
+              <span className="absolute top-0 right-0 w-full h-1 rounded-full opacity-20 bg-[#eb1e27]"></span>
+              <span className="absolute top-0 right-0 z-10 h-1 rounded-full bg-[#eb1e27] w-[21.72%]"></span>
             </div>
           </div>
           <div className="container relative">
@@ -127,16 +103,14 @@ function Swiper2() {
             >
               <SwiperSlide className="swiper-slide-2">
                 <div className="flex flex-col h-[270px] py-2 justify-between">
-                  <p
-                    className="text-xl font-black text-center"
-                    style={{ color: "rgb(235, 30, 39)" }}
-                  >
+                  <p className="text-xl font-black text-center text-[#eb1e27]">
                     اُتایم
                   </p>
                   <div className="z-10">
                     <img
                       src="/image/darsad.png"
                       alt=""
+                      loading="lazy"
                       className="h-[140px] w-[140px]"
                     />
                   </div>
@@ -153,40 +127,9 @@ function Swiper2() {
                   />
                 </SwiperSlide>
               ))}
-              <div
-                className="absolute bottom-0 left-0 flex items-end justify-center right-0 w-full h-56 rounded-xl"
-                style={{ backgroundColor: "rgb(235, 30, 39)" }}
-              ></div>
+              <div className="absolute bottom-0 left-0 flex items-end justify-center right-0 w-full h-56 rounded-xl bg-[#eb1e27]"></div>
             </Swiper>
           </div>
-          {/*  <>
-            <Swiper
-               style={{zIndex:10,position:"relative"}}
-              slidesPerView={4}
-              spaceBetween={30}
-              centeredSlides={true}
-              pagination={false}
-              modules={[Pagination]}
-              className="swiper2"
-            >
-              <SwiperSlide className="swiper-slide-2">
-                <CartSwiper />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide-2">
-                <CartSwiper />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide-2">
-                <CartSwiper />
-              </SwiperSlide>
-              <SwiperSlide>Slide 4</SwiperSlide>
-              <SwiperSlide>Slide 5</SwiperSlide>
-              <SwiperSlide>Slide 6</SwiperSlide>
-              <SwiperSlide>Slide 7</SwiperSlide>
-              <SwiperSlide>Slide 8</SwiperSlide>
-              <SwiperSlide>Slide 9</SwiperSlide>
-                  <div className="absolute bottom-0 left-0 flex items-end justify-center right-0 w-full h-56 rounded-xl" style={{backgroundColor:"rgb(235, 30, 39)"}}></div>
-            </Swiper>
-          </> */}
         </div>
       </div>
     </div>

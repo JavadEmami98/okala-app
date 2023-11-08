@@ -112,7 +112,11 @@ export default function MobileTabProfile() {
               <div className=" flex justify-between w-full  text-white">
                 <div>
                   <div className="flex text-sm">
-                    <LuPhoneCall style={{ width: "15px", height: "15px" }} />
+                    <Box
+                      component={LuPhoneCall}
+                      sx={{ width: "15px", height: "15px" }}
+                    />
+
                     <p className="mr-2 text-sm">مرکز تماس امور مشتریان</p>
                   </div>
                   <div className="text-medium text-start  mr-8 mt-1">1536</div>
@@ -197,8 +201,9 @@ export default function MobileTabProfile() {
                     width: "143px",
                   }}
                 >
-                  <MdOutlineUploadFile
-                    style={{
+                  <Box
+                    component={MdOutlineUploadFile}
+                    sx={{
                       width: "20px",
                       height: "20px",
                       marginLeft: "10px",
@@ -225,7 +230,10 @@ export default function MobileTabProfile() {
               <div className=" flex justify-between w-full  text-white">
                 <div>
                   <div className="flex text-sm">
-                    <LuPhoneCall style={{ width: "15px", height: "15px" }} />
+                    <Box
+                      component={LuPhoneCall}
+                      sx={{ width: "15px", height: "15px" }}
+                    />
                     <p className="mr-2 text-sm">مرکز تماس امور مشتریان</p>
                   </div>
                   <div className="text-medium text-start  mr-8 mt-1">1536</div>

@@ -15,8 +15,9 @@ function HeaderOkala() {
           <div className="flex items-center">
             <HamMenu />
             <img
-              src="https://okala.com/static/images/icons/logo-okala2.svg"
+              src="/image/logo-okala-h.svg"
               alt=""
+              loading="lazy"
               className="ml-10 cursor-pointer"
             />
             <div className="flex items-center rounded-[8px] bg-[#f8f8f8] px-[8px] py-[12px] cursor-pointer">

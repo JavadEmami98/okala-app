@@ -66,6 +66,7 @@ function Factor() {
                   <img
                     src="/image/ok.png"
                     alt=""
+                    loading="lazy"
                     className="h-[68px] w-[68px]"
                   />
                   <h6 className="text-base text-start font-medium text-gray-900 mr-4 w-full">
@@ -82,6 +83,7 @@ function Factor() {
                     <img
                       src="/image/kalbas.png"
                       alt=""
+                      loading="lazy"
                       className="h-[92px] w-[92px]"
                     />
                   </div>
