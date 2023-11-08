@@ -40,11 +40,10 @@ export default function FactorSwiper() {
         grid={{
           rows: 2,
         }}
-
         pagination={false}
         modules={[Grid, Pagination]}
         className="swiper-fac"
-       style={{height:"100%",width:"100%"}}
+        style={{ height: "100%", width: "100%" }}
       >
         <SwiperSlide className="swiper-slide-fac">
           <CartFactorSwiper />
@@ -70,7 +69,6 @@ export default function FactorSwiper() {
         <SwiperSlide className="swiper-slide-fac">
           <CartFactorSwiper />
         </SwiperSlide>
-       
       </Swiper>
     </>
   );

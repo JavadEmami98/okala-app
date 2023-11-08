@@ -1,8 +1,10 @@
 import React from "react";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import { Box, Checkbox, Collapse } from "@mui/material";
-import { FiSearch } from "react-icons/fi";
+import { Box, Checkbox, Collapse, Typography } from "@mui/material";
+import { LuSearch } from "react-icons/lu";
+
+const list = [{ title: "چی توز" }, { title: "دامداران" }, { title: "مزمز" }];
 
 function AvailableBrands() {
   const [open, setOpen] = React.useState(false);
@@ -11,27 +13,60 @@ function AvailableBrands() {
     setOpen(!open);
   };
   return (
-    <div>
+    <Box>
       <Box
-        sx={{ boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px" }}
-        className="mb-3 rounded-xl p-4 max-h-[280px] min-h-[54px] flex flex-col transition-all duration-300"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          transition: "all",
+          transitionDuration: "300ms",
+          boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px",
+          marginBottom: "12px",
+          borderRadius: "12px",
+          padding: "16px",
+          maxHeight: "280px",
+          minHeight: "54px",
+        }}
       >
-        <div
+        <Box
           onClick={handleClick}
-          className="h-[33px] flex justify-between items-center mb-3 relative"
+          sx={{
+            height: "33px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginBottom: "12px",
+            position: "relative",
+          }}
         >
-          <p className="border-r-4 border-[#02a0a4] border-opacity-70 pr-1 text-sm font-medium">
+          <Typography
+            sx={{
+              borderRight: "4px solid #02a0a4",
+              paddingRight: "4px",
+              fontSize: "14px",
+              fontWeight: 500,
+            }}
+          >
             برندهای موجود
-          </p>
+          </Typography>
           {open ? (
             <ExpandLess sx={{ cursor: "pointer" }} />
           ) : (
             <ExpandMore sx={{ cursor: "pointer" }} />
           )}
-        </div>
+        </Box>
         <Collapse in={open} timeout="auto" unmountOnExit>
-          <div className="px-3">
-            <div className="relative mb-2 px-3 border border-gray-400 rounded-lg py-3">
+          <Box sx={{ paddingX: "12px" }}>
+            <Box
+              sx={{
+                position: "relative",
+                marginBottom: "8px",
+                paddingX: "12px",
+                border: "1px solid #afafaf",
+                borderRadius: "8px",
+                paddingY: "12px",
+              }}
+            >
               <input
                 type="text"
                 name=""
@@ -39,31 +74,44 @@ function AvailableBrands() {
                 className="pr-4"
                 placeholder="... جستجوی نام برند "
               />
-              <FiSearch
+              <Box
+                component={LuSearch}
                 sx={{
                   position: "absolute",
-                  top: 13,
-                  right: 3,
+                  top: 15,
+                  right: 7,
                   color: "rgb(54, 54, 54)",
+                  width: "20px",
+                  height: "20px",
                 }}
               />
-            </div>
-            <div className="flex items-center mr-4">
-              <Checkbox sx={{ padding: "16px !important" }} />
-              <p className="text-[.875rem]">گلرنگ</p>
-            </div>
-            <div className="flex items-center mr-4">
-              <Checkbox sx={{ padding: "16px !important" }} />
-              <p className="text-[.875rem]">دامداران</p>
-            </div>
-            <div className="flex items-center mr-4">
-              <Checkbox sx={{ padding: "16px !important" }} />
-              <p className="text-[.875rem]">چی توز</p>
-            </div>
-          </div>
+            </Box>
+            {list.map((item, index) => (
+              <Box
+                key={index}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  marginRight: "16px",
+                  height: "40px",
+                }}
+              >
+                <Checkbox
+                  sx={{
+                    padding: "16px !important",
+                    height: "40px",
+                    width: "40px",
+                  }}
+                />
+                <Typography sx={{ fontSize: ".875rem" }}>
+                  {item.title}
+                </Typography>
+              </Box>
+            ))}
+          </Box>
         </Collapse>
       </Box>
-    </div>
+    </Box>
   );
 }
 

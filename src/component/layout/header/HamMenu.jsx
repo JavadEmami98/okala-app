@@ -21,7 +21,7 @@ function HamMenu() {
             "&:hover": { backgroundColor: "#f8f8f8" },
           }}
         />
-        <Drawer anchor={"right"} open={open} onClose={() => setOpen(false)}>
+        <Drawer anchor={"left"} open={open} onClose={() => setOpen(false)}>
           <div className="w-[307px] h-full relative">
             <div className="flex items-center justify-center py-2 shadow-sm">
               <img
@@ -33,7 +33,7 @@ function HamMenu() {
               <CloseIcon
                 className="absolute top-2 left-2"
                 onClick={() => setOpen(false)}
-                sx={{ opacity: "50%", color: "#000000",cursor:"pointer" }}
+                sx={{ opacity: "50%", color: "#000000", cursor: "pointer" }}
               />
             </div>
             <div className="p-4">
