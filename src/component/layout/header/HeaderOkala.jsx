@@ -5,6 +5,7 @@ import HamMenu from "./HamMenu";
 import LocationDialog from "./LocationDialog";
 import Account from "./Account";
 import TopHeader from "./TopHeader";
+import { Box } from "@mui/material";
 
 function HeaderOkala() {
   return (
@@ -12,7 +13,7 @@ function HeaderOkala() {
       <TopHeader />
       <div className="sticky flex items-center justify-between border-b border-[#e6e6e6] shadow-[0_4px_16px_rgb(22,22,22,.08)]">
         <div className="container flex py-6 items-center justify-between">
-          <div className="flex items-center">
+          <Box sx={{ display: "flex", alignItems: "center" }}>
             <HamMenu />
             <img
               src="/image/logo-okala-h.svg"
@@ -24,26 +25,39 @@ function HeaderOkala() {
               <StorefrontOutlinedIcon sx={{ width: "20px", height: "20px" }} />
               <p className="text-sm text-[#363636] pr-1"> مشاهده فروشگاه‌ها</p>
             </div>
-          </div>
+          </Box>
           <LocationDialog />
           <div>
-            <div className="flex items-center">
+            <Box sx={{ display: "flex", alignItems: "center" }}>
               <Account />
-              <div className="border-l border-[#0000001f] mt-1 mr-2">
+              <Box
+                sx={{
+                  borderLeft: "1px solid #0000001f",
+                  marginTop: "4px",
+                  marginRight: "8px",
+                }}
+              >
                 &nbsp;{" "}
-              </div>
+              </Box>
               <div className="flex items-center px-[8px] py-[6px] rounded-[10px] hover:bg-[#f8f8f8] mr-4">
                 <ShoppingCartOutlinedIcon />
-                <div className="flex flex-col items-start pr-3">
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    paddingRight: "12px",
+                  }}
+                >
                   <p className="text-sm	font-medium text-grey-800 whitespace-nowrap">
                     سبد خرید
                   </p>
                   <p className="font-medium text-xs whitespace-nowrap">
                     از چند فروشگاه
                   </p>
-                </div>
+                </Box>
               </div>
-            </div>
+            </Box>
           </div>
         </div>
       </div>

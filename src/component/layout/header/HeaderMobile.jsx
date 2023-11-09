@@ -5,17 +5,16 @@ import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import { Drawer, Box, Button } from "@mui/material";
 import DriveFileRenameOutlineOutlinedIcon from "@mui/icons-material/DriveFileRenameOutlineOutlined";
-import EastOutlinedIcon from '@mui/icons-material/EastOutlined';
-import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
+import EastOutlinedIcon from "@mui/icons-material/EastOutlined";
+import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import CheckBoxOutlinedIcon from "@mui/icons-material/CheckBoxOutlined";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
-import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
-
+import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 
 function HeaderMobile() {
-    const [open, setOpen] = React.useState(false);
-    const [open2, setOpen2] = React.useState(false);
-    const [open3, setOpen3] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
+  const [open2, setOpen2] = React.useState(false);
+  const [open3, setOpen3] = React.useState(false);
   return (
     <div>
       <div className="relative flex flex-row pb-0 pt-4 !h-12 justify-center items-center">
@@ -31,7 +30,10 @@ function HeaderMobile() {
       </div>
       <div className="py-[7px]">
         <div className="mx-[16px] py-[5px] h-[58px] relative">
-          <div onClick={() => setOpen(true)} className="w-full flex items-center bg-gray-100 border border-gray-200 rounded-lg select-none px-4 !h-12">
+          <div
+            onClick={() => setOpen(true)}
+            className="w-full flex items-center bg-gray-100 border border-gray-200 rounded-lg select-none px-4 !h-12"
+          >
             <SearchIcon
               sx={{
                 height: "24px",
@@ -44,37 +46,50 @@ function HeaderMobile() {
               جستجوی کالا یا برند
             </p>
           </div>
-          <Drawer sx={{height:"100% !important"}}  anchor={"bottom"} open={open} onClose={() => setOpen(false)}>
-               
-                  <div className="h-14 relative shadow-md flex items-center px-4 bg-white  ">
-                    <EastOutlinedIcon onClick={() => setOpen(false)} sx={{m:"12px"}}/>
-                  
-                    <input type="text" className="h-full w-full  outline-none" placeholder="جستجوی کالا یا برند"/>
-                    <div className="absolute p-3 top-1 left-3 rounded-[10px] bg-[#F8F8F8]">
-                        <CloseOutlinedIcon/></div>
-                    
-                  </div>
-                  <div className="flex my-3 pt-[5px]">
-                    <div className="flex py-[6px] px-[8px] items-center gap-2">
-                    <SearchIcon
-              sx={{
-                height: "24px",
-                width: "24px",
-                ml: "8px",
-                color: "#545454",
-              }}
-            />
-            <p className=" text-sm text-gray-800 cursor-pointer hover:text-gray-900">
-            نمایش همه نتایج برای fff
-            </p>
-                    </div>
-                     </div>
-                  
-                </Drawer>
+          <Drawer
+            sx={{ height: "100% !important" }}
+            anchor={"bottom"}
+            open={open}
+            onClose={() => setOpen(false)}
+          >
+            <div className="h-14 relative shadow-md flex items-center px-4 bg-white  ">
+              <EastOutlinedIcon
+                onClick={() => setOpen(false)}
+                sx={{ m: "12px" }}
+              />
+
+              <input
+                type="text"
+                className="h-full w-full  outline-none"
+                placeholder="جستجوی کالا یا برند"
+              />
+              <div className="absolute p-3 top-1 left-3 rounded-[10px] bg-[#F8F8F8]">
+                <CloseOutlinedIcon />
+              </div>
+            </div>
+            <div className="flex my-3 pt-[5px]">
+              <div className="flex py-[6px] px-[8px] items-center gap-2">
+                <SearchIcon
+                  sx={{
+                    height: "24px",
+                    width: "24px",
+                    ml: "8px",
+                    color: "#545454",
+                  }}
+                />
+                <p className=" text-sm text-gray-800 cursor-pointer hover:text-gray-900">
+                  نمایش همه نتایج برای fff
+                </p>
+              </div>
+            </div>
+          </Drawer>
         </div>
       </div>
       <div className="px-4 py-1.5 border-t border-b border-gray-100 h-12 ">
-        <div onClick={() => setOpen2(true)} className="w-full flex justify-between items-center px-2 h-[30px]">
+        <div
+          onClick={() => setOpen2(true)}
+          className="w-full flex justify-between items-center px-2 h-[30px]"
+        >
           <div className="flex gap-2">
             <FmdGoodOutlinedIcon
               sx={{ width: "20px", height: "20px", color: "#545454" }}
@@ -86,119 +101,141 @@ function HeaderMobile() {
           </div>
           <NavigateBeforeIcon sx={{ color: "#545454" }} />
         </div>
-        <Drawer sx={{height:"100% !important"}}  anchor={"bottom"} open={open2} onClose={() => setOpen2(false)}>
-               
-                  <div className="h-14 relative shadow-md flex items-center px-4 bg-white  ">
-                    <EastOutlinedIcon onClick={() => setOpen2(false)} sx={{m:"12px"}}/>
-                  
-                   <p className="text-[14.4px] text-[#000000DE] font-semibold pr-4">انتخاب آدرس</p>
-                    
-                  </div>
-                  <div className="flex flex-col h-full w-full justify-between p-4">
-               <div>
-               <div className="flex flex-col justify-between cursor-pointer p-4 bg-[#e0f2f4] rounded-md border border-[#b0dee0]">
-            <div className="flex h-[68px]">
-              <CheckBoxOutlinedIcon sx={{ color: "#02a0a4", ml: "8px" }} />
-              <p className="text-[14px] text-[#000000DE]">سید رضی 46 پلاک ۳۱۳ - پلاک ۳۱۳ - واحد ۲</p>
-            </div>
-            <div className="flex items-center justify-between">
-              <p className="text-[#8f8f8f] text-[14px]">09015427057</p>
-              <div className="flex">
-                <Box
-                  variant="outlined"
-                  sx={{
-                    display: "flex",
-                    ":hover": { backgroundColor: "#f8f8f8" },
-                    justifyContent: "center",
-                    alignItems: "center",
-                    backgroundColor: "#FFF",
-                    height: "32px",
-                    width: "32px",
-                    padding: "6px 8px",
-                    ml: "10px",
-                    borderRadius: "10px",
-                  }}
-                >
-                  <DriveFileRenameOutlineOutlinedIcon
-                    sx={{ height: "24px", width: "24px" }}
-                  />
-                </Box>
-                <Box
-                  variant="outlined"
-                  sx={{
-                    display: "flex",
-                    ":hover": { backgroundColor: "#f8f8f8" },
-                    justifyContent: "center",
-                    alignItems: "center",
-                    backgroundColor: "#FFF",
-                    height: "32px",
-                    width: "32px",
-                    padding: "6px 8px",
-                    ml: "10px",
-                    borderRadius: "10px",
-                  }}
-                >
-                  <DeleteOutlinedIcon onClick={() => setOpen3(true)} sx={{ height: "24px", width: "24px" }} />
-                  <Drawer
-              sx={{
-                "& .css-9emuhu-MuiPaper-root-MuiDrawer-paper": {
-                  height: "190px !important",
-                  padding: "24px 16px",
-                  borderTopLeftRadius: "12px !important",
-                  borderTopRightRadius: "12px !important",
-                  overflowX: "hidden",
-                },
-              }}
-              anchor={"bottom"}
-              open={open3}
-              onClose={() => setOpen3(false)}
-            >
-         <h6 className="text-[16px] text-center font-medium text-gray-900">آیا از حذف آدرس مورد نظر مطمئن هستید؟ </h6>
-         <div className="grid w-full grid-cols-2 gap-3 mt-auto">
-                  <Button
-                   onClick={() => setOpen3(false)}
-                    variant="text"
-                    sx={{
-                      width: "100%",
-                      fontSize: "14px",
-                      height: "42px",
-                      border: "1px solid #afafaf",
-                      borderRadius: "10px",
-                      color: "#f01436",
-                    }}
-                  >
-                    انصراف
-                  </Button>
-                  <Button
-                    variant="contained"
-                    sx={{
-                      width: "100%",
-                      fontSize: "14px",
-                      height: "42px",
-                      backgroundColor: "#f01436",
-                      borderRadius: "10px",
-                      "&:hover": { backgroundColor: "#f01436" },
-                      boxShadow: "none !important",
-                    }}
-                  >
-                   بله، حذف کن
-                  </Button>
+        <Drawer
+          sx={{ height: "100% !important" }}
+          anchor={"bottom"}
+          open={open2}
+          onClose={() => setOpen2(false)}
+        >
+          <div className="h-14 relative shadow-md flex items-center px-4 bg-white  ">
+            <EastOutlinedIcon
+              onClick={() => setOpen2(false)}
+              sx={{ m: "12px" }}
+            />
+
+            <p className="text-[14.4px] text-[#000000DE] font-semibold pr-4">
+              انتخاب آدرس
+            </p>
+          </div>
+          <div className="flex flex-col h-full w-full justify-between p-4">
+            <div>
+              <div className="flex flex-col justify-between cursor-pointer p-4 bg-[#e0f2f4] rounded-md border border-[#b0dee0]">
+                <div className="flex h-[68px]">
+                  <CheckBoxOutlinedIcon sx={{ color: "#02a0a4", ml: "8px" }} />
+                  <p className="text-[14px] text-[#000000DE]">
+                    سید رضی 46 پلاک ۳۱۳ - پلاک ۳۱۳ - واحد ۲
+                  </p>
                 </div>
-            </Drawer>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <p className="text-[#8f8f8f] text-[14px]">09015427057</p>
+                  <Box sx={{display:"flex"}}>
+                    <Box
+                      variant="outlined"
+                      sx={{
+                        display: "flex",
+                        ":hover": { backgroundColor: "#f8f8f8" },
+                        justifyContent: "center",
+                        alignItems: "center",
+                        backgroundColor: "#FFF",
+                        height: "32px",
+                        width: "32px",
+                        padding: "6px 8px",
+                        ml: "10px",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      <DriveFileRenameOutlineOutlinedIcon
+                        sx={{ height: "24px", width: "24px" }}
+                      />
+                    </Box>
+                    <Box
+                      variant="outlined"
+                      sx={{
+                        display: "flex",
+                        ":hover": { backgroundColor: "#f8f8f8" },
+                        justifyContent: "center",
+                        alignItems: "center",
+                        backgroundColor: "#FFF",
+                        height: "32px",
+                        width: "32px",
+                        padding: "6px 8px",
+                        ml: "10px",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      <DeleteOutlinedIcon
+                        onClick={() => setOpen3(true)}
+                        sx={{ height: "24px", width: "24px" }}
+                      />
+                      <Drawer
+                        sx={{
+                          "& .css-9emuhu-MuiPaper-root-MuiDrawer-paper": {
+                            height: "190px !important",
+                            padding: "24px 16px",
+                            borderTopLeftRadius: "12px !important",
+                            borderTopRightRadius: "12px !important",
+                            overflowX: "hidden",
+                          },
+                        }}
+                        anchor={"bottom"}
+                        open={open3}
+                        onClose={() => setOpen3(false)}
+                      >
+                        <h6 className="text-[16px] text-center font-medium text-gray-900">
+                          آیا از حذف آدرس مورد نظر مطمئن هستید؟{" "}
+                        </h6>
+                        <div className="grid w-full grid-cols-2 gap-3 mt-auto">
+                          <Button
+                            onClick={() => setOpen3(false)}
+                            variant="text"
+                            sx={{
+                              width: "100%",
+                              fontSize: "14px",
+                              height: "42px",
+                              border: "1px solid #afafaf",
+                              borderRadius: "10px",
+                              color: "#f01436",
+                            }}
+                          >
+                            انصراف
+                          </Button>
+                          <Button
+                            variant="contained"
+                            sx={{
+                              width: "100%",
+                              fontSize: "14px",
+                              height: "42px",
+                              backgroundColor: "#f01436",
+                              borderRadius: "10px",
+                              "&:hover": { backgroundColor: "#f01436" },
+                              boxShadow: "none !important",
+                            }}
+                          >
+                            بله، حذف کن
+                          </Button>
+                        </div>
+                      </Drawer>
+                    </Box>
+                  </Box>
                 </Box>
               </div>
             </div>
+            <div className=" w-full flex items-center bg-white py-5 pr-4 gap-2">
+              <AddOutlinedIcon
+                sx={{ width: "23px", height: "23px", color: "#f01436" }}
+              />
+              <span className="text-base font-medium text-red-600">
+                افزودن آدرس جدید
+              </span>
+            </div>
           </div>
-               </div>
-               <div className=" w-full flex items-center bg-white py-5 pr-4 gap-2">
-                    <AddOutlinedIcon sx={{width:"23px",height:"23px",color:"#f01436"}}/>
-                    <span className="text-base font-medium text-red-600">
-                    افزودن آدرس جدید
-                    </span>
-               </div>
-                     </div>
-                  
-                </Drawer>
+        </Drawer>
       </div>
     </div>
   );

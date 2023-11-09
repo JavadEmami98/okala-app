@@ -36,12 +36,12 @@ function CartSwiper({ image, oldprice, price, offer, description }) {
           <p className="text-xs md:text-sm font-normal text-gray-500 leading-6 line-through pt-1">
             {oldprice}
           </p>
-          <div className="flex items-center">
+          <Box sx={{ display: "flex", alignItems: "center" }}>
             <p className="text-base md:text-lg font-bold text-gray-900 leading-7">
               {price}
             </p>
             <span className="text-xs font-normal text-gray-800 mr-1">ریال</span>
-          </div>
+          </Box>
         </div>
         <div className="flex justify-center w-[32px] h-[24px] items-center bg-[#f01436] rounded-[100px] select-none  mt-4">
           <span className="text-xs font-medium text-white leading-4">

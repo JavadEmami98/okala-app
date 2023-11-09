@@ -63,7 +63,14 @@ function FilterPrice() {
                 <p className="text-grey-600">ریال</p>
               </div>
             </div>
-            <div className="flex items-center gap-1 my-4">
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: 1,
+                marginY: "16px",
+              }}
+            >
               <Button
                 variant="outlined"
                 sx={{
@@ -90,7 +97,7 @@ function FilterPrice() {
               >
                 فیلتر قیمت
               </Button>
-            </div>
+            </Box>
           </div>
         </Collapse>
       </Box>

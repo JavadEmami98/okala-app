@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderOkala from "../component/layout/header/HeaderOkala";
-import { Box, Button, Drawer } from "@mui/material";
+import { Box, Button, Drawer, Typography } from "@mui/material";
 import EastIcon from "@mui/icons-material/East";
 import Footer from "../component/layout/footer/Footer";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
@@ -237,7 +237,14 @@ function Factor() {
           <div className="hidden md:hidden lg:block w-5/12 lg:w-4/12">
             <div className="p-4 mr-4 bg-white shadow rounded-xl">
               <div className="flex items-center mb-4">
-                <hr className=" border-l-[4px] border-[#7cc8cc] rounded-[100px] h-[16px] ml-[10px]" />
+                <Box
+                  sx={{
+                    borderLeft: "4px solid #7cc8cc",
+                    borderRadius: "6.25rem",
+                    height: "1rem",
+                    marginRight: "0.5rem",
+                  }}
+                />
                 <h6 className="text-sm font-medium text-gray-900">
                   جزئیات فاکتور
                 </h6>
@@ -264,9 +271,9 @@ function Factor() {
                 </div>
                 <div className="flex items-center justify-between py-3 border-b border-dashed border-gray-100">
                   <div className="flex items-center">
-                    <span className="text-sm font-normal text-gray-900">
+                    <Typography variant="subtitle2">
                       سود شما از این خرید
-                    </span>
+                    </Typography>
                   </div>
                   <div className="flex items-center">
                     <span className="mr-2 text-base font-medium text-gray-900">
@@ -397,9 +404,9 @@ function Factor() {
                   </div>
                   <div className="flex justify-between items-center py-4 px-3 border-b border-gray-100 border-dashed">
                     <div className="flex">
-                      <span className="text-sm font-medium text-gray-900">
+                      <Typography variant="body2">
                         سود شما از این خرید
-                      </span>
+                      </Typography>
                     </div>
                     <div className="flex">
                       <span className="text-sm font-medium text-gray-900">

@@ -1,17 +1,8 @@
 import React from "react";
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
-import { Box , Dialog, DialogActions, Slide } from "@mui/material";
+import { Box, Dialog, DialogActions } from "@mui/material";
 import { AiOutlineClose } from "react-icons/ai";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-
-const Transition = React.forwardRef(function Transition(
-  props: TransitionProps & {
-    children: React.ReactElement<any, any>,
-  },
-  ref: React.Ref<unknown>
-) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
 
 function CartProduct({ image, oldprice, price, offer, description }) {
   const [open, setOpen] = React.useState(false);
@@ -37,15 +28,22 @@ function CartProduct({ image, oldprice, price, offer, description }) {
               sx={{ width: "36px", height: "36px", color: "#f01436" }}
             />
           </div>
-          <div className="w-32 h-32">
+          <Box sx={{ width: "8rem", height: "8rem" }}>
             <img src={image} alt="" loading="lazy" />
-          </div>
+          </Box>
           <div className="w-full flex justify-between mt-2 h-11 px-3">
-            <div className="flex flex-col select-none items-start h-full">
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                height: "100%",
+              }}
+            >
               <p className="text-xs md:text-sm font-normal text-gray-500 leading-6 line-through pt-1">
                 {oldprice}
               </p>
-              <div className="flex items-center">
+              <div className="">
                 <p className="text-base md:text-lg font-bold text-gray-900 leading-7">
                   {price}
                 </p>
@@ -53,7 +51,7 @@ function CartProduct({ image, oldprice, price, offer, description }) {
                   ریال
                 </span>
               </div>
-            </div>
+            </Box>
             <div className="flex justify-center w-[32px] h-[24px] items-center bg-[#f01436] rounded-[100px] select-none  mt-4">
               <span className="text-xs font-medium text-white leading-4">
                 {offer}
@@ -66,10 +64,9 @@ function CartProduct({ image, oldprice, price, offer, description }) {
         </div>
         <Dialog
           open={open}
-          TransitionComponent={Transition}
-          keepMounted
           onClose={handleClose}
-          aria-describedby="alert-dialog-slide-description"
+          aria-labelledby="alert-dialog-title"
+          aria-describedby="alert-dialog-description"
         >
           <DialogActions>
             <div className="relative p-9">
@@ -88,10 +85,13 @@ function CartProduct({ image, oldprice, price, offer, description }) {
                   height: "42px",
                 }}
               >
-                <Box component={AiOutlineClose } sx={{ color: "green !important"}}/>
+                <Box
+                  component={AiOutlineClose}
+                  sx={{ color: "green !important" }}
+                />
               </Box>
               <ul className="mb-9  text-[#686868] text-[.75rem]">
-                <li className="flex items-center gap-2">
+                <li className=" gap-2">
                   <p>افق کوروش</p>
                   <ArrowBackIosNewIcon />
                 </li>

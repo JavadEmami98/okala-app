@@ -12,7 +12,13 @@ function Footer() {
         <div className="border-t border-grey-200 xs:mt-4 md:mt-0  w-full">
           <div className="container flex flex-col">
             <div className="flex flex-col rounded-lg bg-gray-100 m-3 p-4 md:mx-0">
-              <div className="flex items-center justify-between">
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
+              >
                 <h1 className="font-bold text-lg text-gray-800">
                   دانلود اپلیکیشن اُکالا
                 </h1>
@@ -34,7 +40,7 @@ function Footer() {
                 >
                   دریافت اپلیکیشن
                 </Button>
-              </div>
+              </Box>
             </div>
             <div className="flex flex-row justify-between border-b border-gray-50 py-8">
               <ul className="text-start">
@@ -50,7 +56,13 @@ function Footer() {
                   </p>
                 </li>
               </ul>
-              <div className="flex flex-col text-start">
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  textAlign: "start",
+                }}
+              >
                 <h1 className="font-medium">تماس با ما</h1>
                 <p className="font-normal text-sm my-3 text-gray-600">
                   تماس با پشتیبانی :
@@ -82,10 +94,16 @@ function Footer() {
                     />
                   </div>
                 </div>
-              </div>
-              <div className="flex flex-col text-start">
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  textAlign: "start",
+                }}
+              >
                 <h1 className="font-medium mb-3">نماد‌های اعتماد</h1>
-                <div className="flex py-2">
+                <Box sx={{ display: "flex", paddingY: "8px" }}>
                   <div className="flex justify-center items-center border rounded-lg border-gray-200 ml-3 p-1 h-[60px] w-[60px]">
                     <img
                       src="https://logo.samandehi.ir/logo.aspx?id=105734&p=nbpdlymaujynyndtqftishwl"
@@ -110,8 +128,8 @@ function Footer() {
                       className="h-[50px] w-[40px] object-cover"
                     />
                   </div>
-                </div>
-              </div>
+                </Box>
+              </Box>
             </div>
             <div className="flex flex-row justify-center items-center py-4">
               <img

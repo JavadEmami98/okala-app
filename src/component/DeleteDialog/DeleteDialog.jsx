@@ -1,17 +1,7 @@
 import React from "react";
 import { Box, Button, Dialog } from "@mui/material";
-import Slide from "@mui/material/Slide";
 import DialogActions from "@mui/material/DialogActions";
 import { AiOutlineDelete } from "react-icons/ai";
-
-const Transition = React.forwardRef(function Transition(
-  props: TransitionProps & {
-    children: React.ReactElement<any, any>,
-  },
-  ref: React.Ref<unknown>
-) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
 
 function DeleteDialog() {
   const [open, setOpen] = React.useState(false);
@@ -32,21 +22,30 @@ function DeleteDialog() {
       />
       <Dialog
         open={open}
-        TransitionComponent={Transition}
-        keepMounted
         onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
         sx={{ height: "300px" }}
-        aria-describedby="alert-dialog-slide-description"
       >
         <DialogActions>
-          <div className="rounded-[12px] bg-[#fff] p-6">
+          <Box
+            sx={{ borderRadius: "12px", background: "#fff", padding: "1.5rem" }}
+          >
             <h4 className="text-[#161616] text-[1.5rem] font-medium mb-[1rem]">
               حذف آدرس
             </h4>
             <h6 className="text-[#363636] text-[1rem] font-medium">
               آیا از حذف آدرس مورد نظر مطمئن هستید؟
             </h6>
-            <div className="mt-8 flex items-center justify-center gap-2">
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginTop: "32px",
+                gap: 2,
+              }}
+            >
               <Button
                 onClick={() => setOpen(false)}
                 variant="text"
@@ -75,8 +74,8 @@ function DeleteDialog() {
               >
                 بله، حذف کن
               </Button>
-            </div>
-          </div>
+            </Box>
+          </Box>
         </DialogActions>
       </Dialog>
     </div>

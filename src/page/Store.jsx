@@ -36,19 +36,39 @@ function Store() {
           },
         }}
       >
-        <div className="w-full h-14 flex justify-between items-center px-4  ">
+        <Box
+          sx={{
+            width: "100%",
+            height: "3.5rem",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            paddingX: "16px",
+          }}
+        >
           <EastIcon />
-          <div className="flex items-center">
+          <Box sx={{ display: "flex", alignItems: "center" }}>
             <HomeOutlinedIcon />
             <ShoppingCartOutlinedIcon sx={{ mr: "16px" }} />
-          </div>
-        </div>
+          </Box>
+        </Box>
       </Box>
       <div className="md:border-b md:border-gray-100 sm:max-w-7xl sm:my-0 sm:mx-auto max-h-[187px]">
         <div className="flex flex-col px-4 py-4 md:flex-row md:justify-between md:items-center">
-          <div className="flex items-center pb-4">
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              paddingBottom: "16px",
+            }}
+          >
             <div className="flex justify-center items-center border border-gray-100 rounded-full  h-[80px] w-[80px]">
-              <img src="/image/ok.png" alt="" loading="lazy" className="h-[46px] w-[46px]" />
+              <img
+                src="/image/ok.png"
+                alt=""
+                loading="lazy"
+                className="h-[46px] w-[46px]"
+              />
             </div>
             <div className="flex flex-col mr-1">
               <p className="text-base text-start md:text-lg text-gray-800 font-bold mr-3 whitespace-nowrap">
@@ -62,7 +82,7 @@ function Store() {
                 <span className="font-normal text-base pr-1">ریال</span>
               </p>
             </div>
-          </div>
+          </Box>
           <div className="flex lg:justify-between md:justify-between justify-around items-center md:py-10">
             <div className="hidden md:flex md:items-center">
               <div className="flex flex-col items-center justify-center text-center border-l border-[#0000001f] md:pl-11 md:pr-11 line-clamp-1">

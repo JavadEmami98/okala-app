@@ -3,8 +3,6 @@ import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
-import Slide from "@mui/material/Slide";
-import { TransitionProps } from "@mui/material/transitions";
 
 import { CgCheckR } from "react-icons/cg";
 
@@ -12,15 +10,6 @@ import AddIcon from "@mui/icons-material/Add";
 import { Box, Button } from "@mui/material";
 import DeleteDialog from "../../DeleteDialog/DeleteDialog";
 import EditMap from "../../EditMap/EditMap";
-
-const Transition = React.forwardRef(function Transition(
-  props: TransitionProps & {
-    children: React.ReactElement<any, any>,
-  },
-  ref: React.Ref<unknown>
-) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
 
 function LocationDialog() {
   const [open, setOpen] = React.useState(false);
@@ -49,10 +38,9 @@ function LocationDialog() {
       </div>
       <Dialog
         open={open}
-        TransitionComponent={Transition}
-        keepMounted
         onClose={handleClose}
-        aria-describedby="alert-dialog-slide-description"
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
       >
         {/*   <DialogTitle>{"Use Google's location service?"}</DialogTitle>
         <DialogContent>
@@ -63,15 +51,22 @@ function LocationDialog() {
         </DialogContent> */}
         <div className="flex justify-between flex-col p-6 rounded-[12px] h-full w-full min-w-[850px]">
           <div className="flex flex-col ">
-            <div className="flex pt-[4px] pb-[16px] pl-[8px]">
-              <div className=" border-l-[4px] border-[#7cc8cc] rounded-[100px] h-[20px] ml-[10px]"></div>
+            <Box sx={{display:"flex",paddingTop:"0.25rem",paddingBottom:"1rem",paddingRight:"0.5rem"}}>
+              <Box
+                sx={{
+                  borderLeft: "4px solid #7cc8cc",
+                  borderRadius: "6.25rem",
+                  height: "1.25rem",
+                  marginRight: "0.625rem",
+                }}
+              ></Box>
               <h6 className="text-base font-medium text-gray-900">
                 انتخاب آدرس
               </h6>
-            </div>
+            </Box>
 
             <div className="flex flex-col justify-between cursor-pointer p-4 rounded-md border bg-[#e0f2f4] border-[#b0dee0] hover:bg-[#b0dee0]">
-              <div className="flex h-[68px]">
+              <Box sx={{ display: "flex", height: "4.25rem" }}>
                 <Box
                   component={CgCheckR}
                   sx={{
@@ -83,8 +78,14 @@ function LocationDialog() {
                 />
 
                 <p>سید رضی 46 پلاک ۳۱۳ - پلاک ۳۱۳ - واحد ۲</p>
-              </div>
-              <div className="flex items-center justify-between">
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
+              >
                 <p className="text-[#8f8f8f] text-[18px]">09015427057</p>
                 <div className="flex">
                   <Box
@@ -122,7 +123,7 @@ function LocationDialog() {
                     <DeleteDialog />
                   </Box>
                 </div>
-              </div>
+              </Box>
             </div>
           </div>
 

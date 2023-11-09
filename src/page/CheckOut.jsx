@@ -6,6 +6,7 @@ import {
   FormControlLabel,
   Radio,
   RadioGroup,
+  Typography,
 } from "@mui/material";
 import React from "react";
 import HeaderOkala from "../component/layout/header/HeaderOkala";
@@ -199,7 +200,7 @@ function CheckOut() {
                 </div>
               </div>
               <div className="flex lg:hidden items-center justify-between w-full px-4 py-2 mb-1 bg-white shadow">
-                <div className="flex items-center">
+                <Box sx={{ display: "flex", alignItems: "center" }}>
                   <span className="relative flex items-center justify-center w-3 h-3">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FC4E53] opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-[#f01436]"></span>
@@ -207,7 +208,7 @@ function CheckOut() {
                   <p className="mr-3 text-sm font-medium text-gray-800">
                     کد تخفیف دارید؟
                   </p>
-                </div>
+                </Box>
                 <Button
                   variant="contained"
                   sx={{
@@ -229,12 +230,25 @@ function CheckOut() {
                 </Button>
               </div>
               <div className="bg-white rounded-xl shadow p-6">
-                <div className="flex items-center mb-8">
-                  <div className=" border-l-[4px] border-[#7cc8cc] rounded-[100px] h-[16px] ml-[8px]"></div>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "2rem",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      borderLeft: "4px solid #7cc8cc",
+                      borderRadius: "6.25rem",
+                      height: "1rem",
+                      marginRight: "0.5rem",
+                    }}
+                  ></Box>
                   <h6 className="text-base font-medium text-gray-900">
                     شیوه پرداخت
                   </h6>
-                </div>
+                </Box>
                 <FormControl sx={{ width: "100%" }}>
                   <RadioGroup
                     aria-labelledby="demo-controlled-radio-buttons-group"
@@ -264,13 +278,28 @@ function CheckOut() {
           {/* Left */}
           <div className="hidden md:hidden lg:block w-5/12 lg:w-4/12">
             <div className="p-4 mr-4 bg-white shadow rounded-xl">
-              <div className="flex items-center mb-4">
-                <hr className=" border-l-[4px] border-[#7cc8cc] rounded-[100px] h-[16px] ml-[10px]" />
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  marginBottom: "1rem",
+                }}
+              >
+                <Box
+                  sx={{
+                    borderLeft: "4px solid #7cc8cc",
+                    borderRadius: "6.25rem",
+                    height: "1rem",
+                    marginRight: "0.625rem",
+                  }}
+                />
                 <h6 className="text-sm font-medium text-gray-900">
                   جزئیات فاکتور
                 </h6>
-              </div>
-              <div className="flex flex-col w-full">
+              </Box>
+              <Box
+                sx={{ display: "flex", flexDirection: "column", width: "100%" }}
+              >
                 <div className="flex items-center justify-between py-3 border-b border-dashed border-gray-100">
                   <div className="flex items-center">
                     <span className="text-sm font-normal text-gray-900">
@@ -292,9 +321,9 @@ function CheckOut() {
                 </div>
                 <div className="flex items-center justify-between py-3 border-b border-dashed border-gray-100">
                   <div className="flex items-center">
-                    <span className="text-sm font-normal text-gray-900">
+                    <Typography variant="subtitle2">
                       سود شما از این خرید
-                    </span>
+                    </Typography>
                   </div>
                   <div className="flex items-center">
                     <span className="mr-2 text-base font-medium text-gray-900">
@@ -334,7 +363,10 @@ function CheckOut() {
                   </div>
                 </div>
                 <div className="flex items-center justify-between w-full p-2 mt-4 rounded-lg bg-gray-50 mb-9">
-                  <div className="flex items-center">
+                  <Box
+                    sx={{ display: "flex", alignItems: "center" }}
+                    className="flex items-center"
+                  >
                     <Box
                       component={CiDiscount1}
                       sx={{ width: "22px", height: "22px" }}
@@ -342,7 +374,7 @@ function CheckOut() {
                     <p className="mr-2 text-sm font-normal text-gray-800">
                       کد تخفیف دارید؟
                     </p>
-                  </div>
+                  </Box>
                   <Button
                     variant="outlined"
                     sx={{
@@ -372,7 +404,7 @@ function CheckOut() {
                 >
                   انتخاب زمان تحویل
                 </Button>
-              </div>
+              </Box>
             </div>
           </div>
         </div>
@@ -391,9 +423,18 @@ function CheckOut() {
               bottom: 0,
               right: 0,
               width: "100%",
+              backgroundColor: "#fff",
             }}
           >
-            <div className="flex items-center justify-between px-4 py-3">
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                paddingX: "1rem",
+                paddingY: "0.75rem",
+              }}
+            >
               <Button
                 variant="contained"
                 sx={{
@@ -408,95 +449,151 @@ function CheckOut() {
               >
                 پرداخت و ثبت نهایی
               </Button>
-              <div
+              <Box
                 onClick={() => setOpen(true)}
-                className="flex flex-col cursor-pointer select-none"
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  cursor: "pointer",
+                  userSelect: "none",
+                }}
               >
-                <div className="flex items-center">
+                <Box sx={{ display: "flex", alignItems: "center" }}>
                   <span className="text-xs font-normal text-gray-800 ml-1">
                     جزئیات فاکتور
                   </span>
 
                   {open ? <ExpandMore /> : <ExpandLess />}
-                </div>
-                <div className="flex gap-2">
+                </Box>
+                <Box sx={{ display: "flex", gap: 2 }}>
                   <span className="text-base font-medium text-gray-900">
                     ۵۶۲٬۶۰۰
                   </span>
                   <span className="text-sm font-normal text-gray-600">
-                    {" "}
                     ريال
                   </span>
-                </div>
-              </div>
+                </Box>
+              </Box>
               <Drawer
                 anchor={"bottom"}
                 open={open}
                 onClose={() => setOpen(false)}
               >
                 <div className="bg-white fixed bottom-0 w-full shadow-xl overflow-y-hidden rounded-t-xl pt-1 h-fit">
-                  <div className="flex flex-col overflow-y-hidden">
-                    <div className="flex justify-between items-center py-4 px-3 border-b border-gray-100 border-dashed">
-                      <div className="flex">
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      overflowY: "hidden",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        paddingY: "1rem",
+                        paddingX: "0.75rem",
+                        borderBottom: "1px solid #f0f0f0",
+                        border: "dashed",
+                      }}
+                    >
+                      <Box sx={{ display: "flex" }}>
                         <span className="text-sm font-medium text-gray-900">
                           مجموع خرید شما
                         </span>
                         <span class="text-sm font-normal text-gray-500 mr-1">
                           (1 کالا)
                         </span>
-                      </div>
-                      <div className="flex">
+                      </Box>
+                      <Box sx={{ display: "flex" }}>
                         <span className="text-sm font-medium text-gray-900">
                           ۵۳۵٬۰۰۰
                         </span>
                         <span class="text-sm font-normal text-gray-600">
                           ريال
                         </span>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center py-4 px-3 border-b border-gray-100 border-dashed">
-                      <div className="flex">
-                        <span className="text-sm font-medium text-gray-900">
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        paddingY: "1rem",
+                        paddingX: "0.75rem",
+                        borderBottom: "1px solid #f0f0f0",
+                        border: "dashed",
+                      }}
+                    >
+                      <Box sx={{ display: "flex" }}>
+                        <Typography variant="subtitle2">
                           سود شما از این خرید
-                        </span>
-                      </div>
-                      <div className="flex">
+                        </Typography>
+                      </Box>
+                      <Box sx={{ display: "flex" }}>
                         <span className="text-sm font-medium text-gray-900">
                           214٬۰۰۰
                         </span>
                         <span class="text-sm font-normal text-gray-600">
                           ريال
                         </span>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center py-4 px-3 border-b border-gray-100 border-dashed">
-                      <div className="flex">
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        paddingY: "1rem",
+                        paddingX: "0.75rem",
+                        borderBottom: "1px solid #f0f0f0",
+                        border: "dashed",
+                      }}
+                    >
+                      <Box sx={{ display: "flex" }}>
                         <span className="text-sm font-medium text-gray-900">
                           هزینه ارسال
                         </span>
-                      </div>
-                      <div className="flex">
+                      </Box>
+                      <Box sx={{ display: "flex" }}>
                         <span className="text-base font-medium text-gray-900">
                           رایگان
                         </span>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center py-4 px-3">
-                      <div className="flex">
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        paddingY: "1rem",
+                        paddingX: "0.75rem",
+                      }}
+                    >
+                      <Box sx={{ display: "flex" }}>
                         <span className="text-sm font-medium text-gray-900">
                           مبلغ قابل پرداخت
                         </span>
-                      </div>
-                      <div className="flex">
+                      </Box>
+                      <Box sx={{ display: "flex" }}>
                         <span className="text-sm font-medium text-gray-900">
                           321٬۰۰۰
                         </span>
                         <span class="text-sm font-normal text-gray-600">
                           ريال
                         </span>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center  px-4 py-3">
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        paddingY: "1rem",
+                        paddingX: "0.75rem",
+                      }}
+                    >
                       <Button
                         variant="contained"
                         sx={{
@@ -511,29 +608,34 @@ function CheckOut() {
                       >
                         پرداخت و ثبت نهایی
                       </Button>
-                      <div className="flex flex-col cursor-pointer select-none">
-                        <div className="flex items-center">
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          cursor: "pointer",
+                        }}
+                      >
+                        <Box sx={{ display: "flex", alignItems: "center" }}>
                           <span className="text-xs font-normal text-gray-800 ml-1">
                             جزئیات فاکتور
                           </span>
 
                           <ExpandMore />
-                        </div>
-                        <div className="flex gap-2">
+                        </Box>
+                        <Box sx={{ display: "flex", gap: 2 }}>
                           <span className="text-base font-medium text-gray-900">
                             ۵۶۲٬۶۰۰
                           </span>
                           <span className="text-sm font-normal text-gray-600">
-                            {" "}
                             ريال
-                          </span>{" "}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                          </span>
+                        </Box>
+                      </Box>
+                    </Box>
+                  </Box>
                 </div>
               </Drawer>
-            </div>
+            </Box>
           </Box>
         </footer>
       </div>

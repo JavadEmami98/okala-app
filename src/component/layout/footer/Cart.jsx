@@ -1,4 +1,4 @@
-import { Button, Drawer, Typography } from "@mui/material";
+import { Box, Button, Drawer, Typography } from "@mui/material";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import EastOutlinedIcon from "@mui/icons-material/EastOutlined";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
@@ -29,18 +29,24 @@ function Cart() {
       >
         <div className="h-14 relative shadow-md flex items-center px-4 bg-white  ">
           <EastOutlinedIcon onClick={() => setOpen(false)} sx={{ m: "12px" }} />
-          <div className="flex items-center gap-2">
+          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
             <p className="text-[14.4px] text-[#000000DE] font-semibold pr-4">
               سبدهای خرید شما
             </p>
-            <div className="flex items-center justify-center h-[20px] w-[20px] rounded-[50%] bg-[#02a0a4]">
+            <div className=" justify-center h-[20px] w-[20px] rounded-[50%] bg-[#02a0a4]">
               <p className="text-xs mx-0.5 text-[#fff]">1</p>
             </div>
-          </div>
+          </Box>
         </div>
         <div className="w-full flex flex-col gap-6 p-4">
-          <div className="flex justify-between items-start">
-            <div className="flex items-center gap-3">
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "flex-start",
+            }}
+          >
+            <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
               <div className="w-14 h-14 flex justify-center items-center flex-shrink-0 border border-gray-100 rounded-lg">
                 <img
                   src="https://cdn.okala.com/media/logo/1"
@@ -52,7 +58,7 @@ function Cart() {
               <h6 className="text-sm font-medium text-gray-800">
                 افق کوروش معلم 33
               </h6>
-            </div>
+            </Box>
             <DeleteOutlinedIcon onClick={() => setOpen2(true)} />
             <Drawer
               sx={{
@@ -68,7 +74,7 @@ function Cart() {
               open={open2}
               onClose={() => setOpen2(false)}
             >
-              <div className="flex flex-col w-full h-full">
+              <Box sx={{display:"flex",flexDirection:"column",width:"100%",height:"100%"}}>
                 <h6 className="text-xl font-medium text-gray-900">حذف سبد</h6>
                 <p className="mt-5 text-sm font-normal leading-6 text-gray-800">
                   می‌خواهید سبد خرید خود در فروشگاه “افق کوروش معلم 33” را حذف
@@ -76,7 +82,7 @@ function Cart() {
                 </p>
                 <div className="grid w-full grid-cols-2 gap-3 mt-7">
                   <Button
-                   onClick={() => setOpen2(false)}
+                    onClick={() => setOpen2(false)}
                     variant="text"
                     sx={{
                       width: "100%",
@@ -104,15 +110,15 @@ function Cart() {
                     حذف سبد
                   </Button>
                 </div>
-              </div>
+              </Box>
             </Drawer>
-          </div>
+          </Box>
           <div className="flex items-center select-none gap-2 overflow-x-auto">
             <div className="w-12 h-12 flex justify-center items-center flex-shrink-0">
-              <img src="image/pasta.jpg" alt="" loading="lazy"/>
+              <img src="image/pasta.jpg" alt="" loading="lazy" />
             </div>
             <div className="w-12 h-12 flex justify-center items-center flex-shrink-0">
-              <img src="image/cream.jpg" alt="" loading="lazy"/>
+              <img src="image/cream.jpg" alt="" loading="lazy" />
             </div>
           </div>
           <div className="w-full flex xs:flex-col sm:flex-row-reverse items-center gap-2">

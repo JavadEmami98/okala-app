@@ -26,11 +26,12 @@ function CartFactorSwiper() {
         }}
       >
         <Box sx={{ display: "flex", height: "42px", width: "42px" }}>
-          <img
+          <Box
+            component="img"
             src="/image/sandis.jpg"
             alt=""
             loading="lazy"
-            className="w-[42px] h-[42px]"
+            sx={{ width: "42px !important", height: "42px" }}
           />
         </Box>
         <Box sx={{ paddingRight: "12px" }}>
@@ -56,19 +57,28 @@ function CartFactorSwiper() {
                 193,000
               </p>
               <Typography
+              variant="subtitle2"
                 sx={{ marginRight: "4px" }}
-                className="text-[0.75rem] font-normal text-gray-800"
+                /* className="text-xs font-normal text-gray-800" */
               >
                 ریال
               </Typography>
             </Box>
           </Box>
         </Box>
-        <div className="flex items-center justify-center h-full mr-[2px]">
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "100%",
+            marginRight: "2px",
+          }}
+        >
           <ControlPointOutlinedIcon
             sx={{ width: "36px", height: "36px", color: "#de082e" }}
           />
-        </div>
+        </Box>
       </Box>
     </Box>
   );

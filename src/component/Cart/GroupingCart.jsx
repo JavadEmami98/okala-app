@@ -15,9 +15,8 @@ function GroupingCart({ image, title }) {
             height: "56px",
           }}
         >
-          <img src={image} alt="" loading="lazy"/>
+          <img src={image} alt="" loading="lazy" />
         </Box>
-
         <p className="text-xs md:text-base  text-center font-medium text-gray-800  md:mt-4 leading-5 tracking-[-0.72px] ">
           {title}
         </p>

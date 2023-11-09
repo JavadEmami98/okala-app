@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import { Drawer } from "@mui/material";
+import { Box, Drawer } from "@mui/material";
 import ListHamMenu from "./ListHamMenu";
 
 function HamMenu() {
@@ -36,9 +36,9 @@ function HamMenu() {
                 sx={{ opacity: "50%", color: "#000000", cursor: "pointer" }}
               />
             </div>
-            <div className="p-4">
+            <Box sx={{ padding: "16px" }}>
               <ListHamMenu />
-            </div>
+            </Box>
           </div>
         </Drawer>
       </Fragment>

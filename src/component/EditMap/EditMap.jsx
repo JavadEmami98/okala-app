@@ -4,21 +4,11 @@ import {
   Checkbox,
   Dialog,
   DialogActions,
-  Slide,
   TextField,
 } from "@mui/material";
 import React from "react";
 import { PiPencilSimpleLineLight } from "react-icons/pi";
 import { LuPenSquare } from "react-icons/lu";
-
-const Transition = React.forwardRef(function Transition(
-  props: TransitionProps & {
-    children: React.ReactElement<any, any>,
-  },
-  ref: React.Ref<unknown>
-) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
 
 function EditMap() {
   const [open, setOpen] = React.useState(false);
@@ -39,19 +29,33 @@ function EditMap() {
       />
       <Dialog
         open={open}
-        TransitionComponent={Transition}
-        keepMounted
         onClose={handleClose}
-        aria-describedby="alert-dialog-slide-description"
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
       >
         <DialogActions>
-          <div className="rounded-[12px] bg-[#fff] p-6 w-[848px] min-h-[588px]">
-            <div className="flex pt-[4px] pb-[16px] pl-[8px]">
-              <div className=" border-l-[4px] border-[#7cc8cc] rounded-[100px] h-[20px] ml-[10px]"></div>
+          <Box
+            sx={{
+              borderRadius: "12px",
+              bgcolor: "#fff",
+              padding: "1.5rem",
+              width: "53rem",
+              minHeight: "36.75rem",
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                paddingTop: "0.25rem",
+                paddingBottom: "1rem",
+                paddingLeft: "0.5rem",
+              }}
+            >
+              <Box sx={{borderLeft:"4px solid #7cc8cc",borderRadius:"6.25rem",height:"1.25rem", marginRight:"0.625rem"}}></Box>
               <h6 className="text-base font-medium text-gray-900">
                 جزئیات آدرس
               </h6>
-            </div>
+            </Box>
             <Box
               sx={{
                 border: "1px solid #e6e6e6",
@@ -132,10 +136,16 @@ function EditMap() {
                 sx={{ width: "100%" }}
               />
             </div>
-            <div className="flex items-center mb-6">
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                marginBottom: "24px",
+              }}
+            >
               <Checkbox />
               <span className="text-[14px] mt-1">تحویل گیرنده خودم نیستم</span>
-            </div>
+            </Box>
             <div className="flex justify-end w-full gap-2">
               <Button
                 onClick={handleClose}
@@ -166,7 +176,7 @@ function EditMap() {
                 تایید و ثبت آدرس
               </Button>
             </div>
-          </div>
+          </Box>
         </DialogActions>
       </Dialog>
     </div>
