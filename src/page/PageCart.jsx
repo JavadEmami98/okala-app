@@ -55,14 +55,21 @@ function PageCart() {
           className=" px-[10px] h-[56px] flex items-center justify-start"
         >
           <EastIcon sx={{ width: "20px", height: "20px" }} />
-          <div className="pr-4">
-            <div className="flex items-center gap-2 font-semibold">
+          <Box sx={{ paddingLeft: "1rem" }}>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: 2,
+                fontWeight: 600,
+              }}
+            >
               سبدهای خرید شما
               <div className="flex items-center justify-center rounded-[50%] bg-[#02a0a4] text-[#fff] text-[12px] min-w-[20px] py-[2px] px-[6px]">
                 2
               </div>
-            </div>
-          </div>
+            </Box>
+          </Box>
         </Box>
       </Box>
       <div className="container">
@@ -77,18 +84,23 @@ function PageCart() {
             },
           }}
         >
-          {" "}
           <div className="flex flex-col w-full p-6 bg-white shadow rounded-xl mt-9 mb-3">
-            <div className="flex items-center">
+            <Box sx={{ display: "flex", alignItems: "center" }}>
               <p className="mr-2 text-base font-medium text-gray-900">
                 سبدهای خرید شما
               </p>
               <p className="mr-2 text-xs font-medium text-gray-600">(2 عدد)</p>
-            </div>
+            </Box>
             <div className="grid grid-cols-2 gap-5 px-5 py-6 mt-4">
               <div className="w-full flex flex-col md:border border-gray-300 md:rounded-lg gap-6 p-4">
-                <div className="flex justify-between items-start">
-                  <div className="flex items-center gap-4">
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "flex-start",
+                  }}
+                >
+                  <Box sx={{ display: "flex", alignItems: "center", gap: 4 }}>
                     <div className="w-16 h-16 flex justify-center items-center flex-shrink-0 border border-gray-100 rounded-lg">
                       <img
                         src="https://cdn.okala.com/media/logo/1"
@@ -100,17 +112,24 @@ function PageCart() {
                     <h6 className="text-base font-medium text-gray-800">
                       افق کوروش معلم 33
                     </h6>
-                  </div>
+                  </Box>
                   <div className="flex items-center justify-center w-6 h-6 cursor-pointer">
                     <DeleteOutlineIcon />
                   </div>
-                </div>
+                </Box>
                 <div className="flex items-center select-none gap-2 overflow-x-auto">
                   <div className="w-12 h-12 flex justify-center items-center flex-shrink-0">
-                    <img src="image/rob.jpg" alt="" loading="lazy"/>
+                    <img src="image/rob.jpg" alt="" loading="lazy" />
                   </div>
                 </div>
-                <div className="w-full flex items-center gap-2">
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    width: "100%",
+                    gap: 2,
+                  }}
+                >
                   <Button
                     variant="text"
                     sx={{
@@ -141,7 +160,7 @@ function PageCart() {
                   >
                     تکمیل سفارش
                   </Button>
-                </div>
+                </Box>
               </div>
             </div>
           </div>
@@ -179,7 +198,7 @@ function PageCart() {
           </div>
           <div className="flex items-center select-none gap-2 overflow-x-auto">
             <div className="w-12 h-12 flex justify-center items-center flex-shrink-0">
-              <img src="image/rob.jpg" alt="" loading="lazy"/>
+              <img src="image/rob.jpg" alt="" loading="lazy" />
             </div>
           </div>
           <div className="w-full flex items-center gap-2">
@@ -237,7 +256,7 @@ function PageCart() {
           </div>
           <div className="flex items-center select-none gap-2 overflow-x-auto">
             <div className="w-12 h-12 flex justify-center items-center flex-shrink-0">
-              <img src="image/rob.jpg" alt="" loading="lazy"/>
+              <img src="image/rob.jpg" alt="" loading="lazy" />
             </div>
           </div>
           <div className="w-full flex items-center gap-2">

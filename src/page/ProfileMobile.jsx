@@ -70,10 +70,10 @@ function ProfileMobile() {
               />
               <p className="text-[14px]">کیف پول</p>
             </div>
-            <div className="flex items-center">
+            <Box sx={{ display: "flex", alignItems: "center" }}>
               <p className="text-base">0</p>
               <p className="text-xs">ریال</p>
-            </div>
+            </Box>
           </Box>
         </div>
       </Box>

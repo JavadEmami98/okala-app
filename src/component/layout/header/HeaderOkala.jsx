@@ -12,7 +12,15 @@ function HeaderOkala() {
     <>
       <TopHeader />
       <div className="sticky flex items-center justify-between border-b border-[#e6e6e6] shadow-[0_4px_16px_rgb(22,22,22,.08)]">
-        <div className="container flex py-6 items-center justify-between">
+        <Box
+          sx={{
+            display: "flex",
+            paddingY: "1.5rem",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+          className="container"
+        >
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <HamMenu />
             <img
@@ -33,8 +41,8 @@ function HeaderOkala() {
               <Box
                 sx={{
                   borderLeft: "1px solid #0000001f",
-                  marginTop: "4px",
-                  marginRight: "8px",
+                  marginTop: "0.25rem",
+                  marginRight: "0.5rem",
                 }}
               >
                 &nbsp;{" "}
@@ -46,7 +54,7 @@ function HeaderOkala() {
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "flex-start",
-                    paddingRight: "12px",
+                    paddingLeft: "0.75rem",
                   }}
                 >
                   <p className="text-sm	font-medium text-grey-800 whitespace-nowrap">
@@ -59,7 +67,7 @@ function HeaderOkala() {
               </div>
             </Box>
           </div>
-        </div>
+        </Box>
       </div>
     </>
   );

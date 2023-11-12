@@ -21,29 +21,29 @@ function AvailableBrands() {
           transition: "all",
           transitionDuration: "300ms",
           boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px",
-          marginBottom: "12px",
-          borderRadius: "12px",
-          padding: "16px",
-          maxHeight: "280px",
-          minHeight: "54px",
+          marginBottom: "0.75rem",
+          borderRadius: "0.75rem",
+          padding: "1rem",
+          maxHeight: "17.5rem",
+          minHeight: "3.375rem",
         }}
       >
         <Box
           onClick={handleClick}
           sx={{
-            height: "33px",
+            height: "2.0625rem",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            marginBottom: "12px",
+            marginBottom: "0.75rem",
             position: "relative",
           }}
         >
           <Typography
             sx={{
-              borderRight: "4px solid #02a0a4",
-              paddingRight: "4px",
-              fontSize: "14px",
+              borderLeft: "0.25rem solid #02a0a4",
+              paddingLeft: "0.25rem",
+              fontSize: "0.875rem",
               fontWeight: 500,
             }}
           >
@@ -60,11 +60,11 @@ function AvailableBrands() {
             <Box
               sx={{
                 position: "relative",
-                marginBottom: "8px",
-                paddingX: "12px",
+                marginBottom: "0.5rem",
+                paddingX: "0.75rem",
                 border: "1px solid #afafaf",
-                borderRadius: "8px",
-                paddingY: "12px",
+                borderRadius: "0.5rem",
+                paddingY: "0.75rem",
               }}
             >
               <input
@@ -79,10 +79,10 @@ function AvailableBrands() {
                 sx={{
                   position: "absolute",
                   top: 15,
-                  right: 7,
+                  left: 7,
                   color: "rgb(54, 54, 54)",
-                  width: "20px",
-                  height: "20px",
+                  width: "1.25rem",
+                  height: "1.25rem",
                 }}
               />
             </Box>
@@ -92,15 +92,15 @@ function AvailableBrands() {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  marginRight: "16px",
-                  height: "40px",
+                  marginLeft: "1rem",
+                  height: "2.5rem",
                 }}
               >
                 <Checkbox
                   sx={{
-                    padding: "16px !important",
-                    height: "40px",
-                    width: "40px",
+                    padding: "1rem !important",
+                    height: "2.5rem",
+                    width: "2.5rem",
                   }}
                 />
                 <Typography sx={{ fontSize: ".875rem" }}>

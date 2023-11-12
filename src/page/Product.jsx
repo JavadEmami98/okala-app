@@ -126,9 +126,16 @@ function Product() {
                 sx={{ boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px" }}
                 className="mb-3 rounded-xl p-4 max-h-[280px] min-h-[54px] flex flex-col transition-all duration-300"
               >
-                <div
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    position: "relative",
+                    marginBottom: "0.75rem",
+                    height: "2.065rem",
+                  }}
                   onClick={handleClick}
-                  className="h-[33px] flex justify-between items-center mb-3 relative"
                 >
                   <p className="border-r-4 border-[#02a0a4] border-opacity-70 pr-1 text-sm font-medium">
                     دسته بندی نتایج
@@ -138,17 +145,30 @@ function Product() {
                   ) : (
                     <ExpandMore sx={{ cursor: "pointer" }} />
                   )}
-                </div>
+                </Box>
                 <Collapse in={open} timeout="auto" unmountOnExit>
-                  <div className="flex w-full items-center mb-3">
+                  <Box
+                    sx={{
+                      display: "flex",
+                      width: "100%",
+                      alignItems: "center",
+                      marginBottom: "0.75rem",
+                    }}
+                  >
                     <KeyboardArrowDownIcon
                       sx={{ width: "18px", height: "18px" }}
                     />
                     <p className="text-sm text-gray-600 mr-1.5 hover:text-gray-700 cursor-pointer">
                       خواربار
                     </p>
-                  </div>
-                  <div className="flex items-center mr-4">
+                  </Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      marginLeft: "1rem",
+                    }}
+                  >
                     <KeyboardArrowLeftIcon
                       sx={{
                         color: "rgb(104, 104, 104)",
@@ -160,26 +180,44 @@ function Product() {
                       برنج
                     </span>
                     <span className="text-gray-400 mr-1.5 text-xs">(7)</span>
-                  </div>
-                  <div className="flex items-center mr-7 mb-1 mt-2.5 text-gray-800 font-medium">
+                  </Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      marginLeft: "1.75rem",
+                      marginTop: "0.625rem",
+                      marginBottom: "0.25rem",
+                    }}
+                    className=" text-gray-800 font-medium"
+                  >
                     <span className="text-sm text-gray-600 hover:text-gray-800 mr-1.5">
                       برنج ایرانی
                     </span>
                     <span className="text-gray-400 mr-1.5 text-xs">(77)</span>
-                  </div>
+                  </Box>
                 </Collapse>
               </Box>
               {/* Brand mojud */}
               <AvailableBrands />
               {/* kala mojud */}
               <Box
-                sx={{ boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px" }}
-                className="mb-3 rounded-xl p-4 max-h-[280px] min-h-[54px] flex flex-col transition-all duration-300"
+                sx={{
+                  boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px",
+                  marginBottom: "0.75rem",
+                  borderRadius: "0.75rem",
+                  padding: "1rem",
+                  maxHeight: "17.5rem",
+                  minHeight: "3.375rem",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+                className="transition-all duration-300"
               >
-                <div className="flex items-center">
+                <Box sx={{ display: "flex", alignItems: "center" }}>
                   <Switch color="error" />
                   <p className="text-[.875rem]">فقط کالاهای موجود</p>
-                </div>
+                </Box>
               </Box>
               {/* Filter gheymat */}
               <FilterPrice />
@@ -187,11 +225,13 @@ function Product() {
           </div>
           {/* Left */}
           <div className="float-left mb-4 max-w-[calc(100% - 324px)]">
-            <div className="w-full flex mb-4">
-              <div className="flex items-center float-right ">
+            <Box sx={{ width: "100%", display: "flex", marginBottom: "1rem" }}>
+              <Box
+                sx={{ display: "flex", alignItems: "center", float: "left" }}
+              >
                 <SwapVertIcon />
                 <p className="pr-2 ">نمایش براساس</p>
-              </div>
+              </Box>
               <ul>
                 <li className="inline-block px-2 cursor-pointer">
                   <p
@@ -253,7 +293,7 @@ function Product() {
                   </p>
                 </li>
               </ul>
-            </div>
+            </Box>
             <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3">
               {data.map((item, index) => (
                 <CartProduct
