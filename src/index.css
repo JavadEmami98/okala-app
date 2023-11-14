@@ -162,21 +162,20 @@ code {
   width: 100%;
 }
 
-
 @keyframes ping {
-  75%, 100% {
+  75%,
+  100% {
     transform: scale(2);
     opacity: 0;
-}
+  }
 }
 
 .animate-ping {
-  animation: ping  1s cubic-bezier(0,0,.2,1) infinite
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 .swiper-wrapper {
   flex-direction: row !important;
- 
 }
 
 .css-19kzrtu {
@@ -196,9 +195,18 @@ code {
   color: #000000;
 }
 
-
 /* Icons */
 .close-icon {
   color: red !important;
   background-color: red;
+}
+
+.btn-animation {
+  color: #fff;
+  cursor: pointer;
+  transition: width 0.1s ease-in-out 0s;
+}
+
+.btn-animation:active {
+  width: 103px;
 }

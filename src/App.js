@@ -10,6 +10,7 @@ import "./App.css";
 import SupportMobile from "./page/SupportMobile";
 import { ThemeProvider } from "styled-components";
 import { createTheme } from "@mui/material";
+import ProductDetail from "./page/ProductDetail";
 
 const Theme = createTheme({
   typography: {
@@ -46,6 +47,7 @@ function App() {
             <Route path="/checkout" element={<CheckOut />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/support" element={<SupportMobile />} />
+            <Route path="/product-detail" element={<ProductDetail />} />
           </Routes>
         </ThemeProvider>
       </BrowserRouter>

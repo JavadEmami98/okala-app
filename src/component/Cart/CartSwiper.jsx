@@ -1,29 +1,28 @@
 import React from "react";
 import { TbBuildingStore } from "react-icons/tb";
-import { GrAdd } from "react-icons/gr";
+import { IoAddSharp } from "react-icons/io5";
 import { Box } from "@mui/material";
 
 function CartSwiper({ image, oldprice, price, offer, description }) {
   return (
     <div className="relative w-full flex flex-col items-center overflow-hidden box-border border-collapse border-gray-200 cursor-pointer z-10 pt-4 !h-[280px] border rounded-lg">
-      <div className="absolute top-28 right-3 z-[11]">
+      <div className=" absolute top-28 right-3 z-[11]">
         <Box
-          className="flex justify-center items-center h-9 !rounded-full hover:bg-white bg-white shadow-sm 
+          className="btn-animation flex justify-center items-center h-9 !rounded-full hover:bg-white bg-white shadow-sm 
         "
           sx={{
             width: " 36px",
-            padding: "6px 8px",
+            padding: "4px 6px",
             minWidth: "36x",
             border: "1px solid #de082e",
           }}
         >
           <Box
-            component={GrAdd}
+            component={IoAddSharp}
             sx={{
-              width: "26px",
-              height: "26px",
-              color: "red !important",
-              fill: "red !important",
+              width: "35px",
+              height: "35px",
+              color: "#f01436!important",
             }}
           />
         </Box>

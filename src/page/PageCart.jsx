@@ -6,6 +6,7 @@ import BottomNav from "../component/layout/footer/BottomNav";
 import Footer from "../component/layout/footer/Footer";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import { AiOutlineDelete } from "react-icons/ai";
 
 function PageCart() {
   return (
@@ -113,9 +114,19 @@ function PageCart() {
                       افق کوروش معلم 33
                     </h6>
                   </Box>
-                  <div className="flex items-center justify-center w-6 h-6 cursor-pointer">
-                    <DeleteOutlineIcon />
-                  </div>
+                  {/*         <div className="flex items-center justify-center w-8 h-8 cursor-pointer">   <AiOutlineDelete />
+                  </div> */}
+                  <Box
+                    component={AiOutlineDelete}
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      width: "1.5rem",
+                      height: "1.5rem",
+                      cursor: "pointer",
+                    }}
+                  />
                 </Box>
                 <div className="flex items-center select-none gap-2 overflow-x-auto">
                   <div className="w-12 h-12 flex justify-center items-center flex-shrink-0">

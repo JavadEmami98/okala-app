@@ -43,7 +43,7 @@ function CartProduct({ image, oldprice, price, offer, description }) {
               <p className="text-xs md:text-sm font-normal text-gray-500 leading-6 line-through pt-1">
                 {oldprice}
               </p>
-              <div className="">
+              <div className="flex items-center">
                 <p className="text-base md:text-lg font-bold text-gray-900 leading-7">
                   {price}
                 </p>
