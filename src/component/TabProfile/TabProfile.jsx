@@ -10,10 +10,12 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import PropTypes from 'prop-types';
 import { LuPhoneCall } from "react-icons/lu";
 import { MdOutlineUploadFile } from "react-icons/md";
 
-function CustomTabPanel(props: TabPanelProps) {
+
+function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
@@ -33,10 +35,16 @@ function CustomTabPanel(props: TabPanelProps) {
   );
 }
 
-function a11yProps(index: number) {
+CustomTabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
   };
 }
 
@@ -48,7 +56,7 @@ export default function TabProfile() {
   };
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
