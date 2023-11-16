@@ -134,7 +134,7 @@ function HeaderMobile() {
                   }}
                 >
                   <p className="text-[#8f8f8f] text-[14px]">09015427057</p>
-                  <Box sx={{display:"flex"}}>
+                  <Box sx={{ display: "flex" }}>
                     <Box
                       variant="outlined"
                       sx={{

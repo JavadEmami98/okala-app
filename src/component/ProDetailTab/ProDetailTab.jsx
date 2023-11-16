@@ -110,7 +110,6 @@ export default function ProDetailTab() {
                   marginRight: "1rem",
                 }}
               >
-            
                 تاریخ انقضا :
               </Typography>
               <Typography
@@ -193,7 +192,6 @@ export default function ProDetailTab() {
                   marginRight: "1rem",
                 }}
               >
-              
                 ابعاد بسته بندی :
               </Typography>
               <Typography
@@ -206,7 +204,11 @@ export default function ProDetailTab() {
         </Grid>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        <Typography sx={{color:"#afafaf",fontSize:"1rem",fontWeight:300}}>توضیحی برای این محصول وجود ندارد</Typography>
+        <Typography
+          sx={{ color: "#afafaf", fontSize: "1rem", fontWeight: 300 }}
+        >
+          توضیحی برای این محصول وجود ندارد
+        </Typography>
       </CustomTabPanel>
     </Box>
   );

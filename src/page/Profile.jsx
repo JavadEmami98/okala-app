@@ -10,7 +10,6 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 import { IoLogOutOutline } from "react-icons/io5";
 import { CiDiscount1 } from "react-icons/ci";
 import NavigateBeforeOutlinedIcon from "@mui/icons-material/NavigateBeforeOutlined";
-import TabProfile from "../component/TabProfile/TabProfile";
 
 function Profile() {
   return (
