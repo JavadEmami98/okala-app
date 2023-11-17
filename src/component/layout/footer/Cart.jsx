@@ -74,7 +74,14 @@ function Cart() {
               open={open2}
               onClose={() => setOpen2(false)}
             >
-              <Box sx={{display:"flex",flexDirection:"column",width:"100%",height:"100%"}}>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  width: "100%",
+                  height: "100%",
+                }}
+              >
                 <h6 className="text-xl font-medium text-gray-900">حذف سبد</h6>
                 <p className="mt-5 text-sm font-normal leading-6 text-gray-800">
                   می‌خواهید سبد خرید خود در فروشگاه “افق کوروش معلم 33” را حذف

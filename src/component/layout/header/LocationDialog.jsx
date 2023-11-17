@@ -3,9 +3,7 @@ import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
-
 import { CgCheckR } from "react-icons/cg";
-
 import AddIcon from "@mui/icons-material/Add";
 import { Box, Button } from "@mui/material";
 import DeleteDialog from "../../DeleteDialog/DeleteDialog";
@@ -41,17 +39,18 @@ function LocationDialog() {
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
+        sx={{ minWidth: "850px !important" }}
       >
-        {/*   <DialogTitle>{"Use Google's location service?"}</DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-slide-description">
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
-          </DialogContentText>
-        </DialogContent> */}
         <div className="flex justify-between flex-col p-6 rounded-[12px] h-full w-full min-w-[850px]">
           <div className="flex flex-col ">
-            <Box sx={{display:"flex",paddingTop:"0.25rem",paddingBottom:"1rem",paddingRight:"0.5rem"}}>
+            <Box
+              sx={{
+                display: "flex",
+                paddingTop: "0.25rem",
+                paddingBottom: "1rem",
+                paddingRight: "0.5rem",
+              }}
+            >
               <Box
                 sx={{
                   borderLeft: "4px solid #7cc8cc",
@@ -71,9 +70,9 @@ function LocationDialog() {
                   component={CgCheckR}
                   sx={{
                     color: "#02a0a4",
-                    marginLeft: "8px",
-                    width: "24px",
-                    height: "24px",
+                    marginRight: "0.5rem",
+                    width: "1.5rem",
+                    height: "1.5rem",
                   }}
                 />
 

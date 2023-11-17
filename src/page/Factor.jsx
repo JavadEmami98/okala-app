@@ -9,6 +9,7 @@ import FactorSwiper from "../component/FactorSwiper/FactorSwiper";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
+import ModalDeliveryTime from "../component/ModalDeliveryTime/ModalDeliveryTime";
 
 function Factor() {
   const [open, setOpen] = React.useState(false);
@@ -313,20 +314,7 @@ function Factor() {
                   </div>
                 </div>
                 <div className="w-full h-6"></div>
-                <Button
-                  variant="contained"
-                  sx={{
-                    width: "100%",
-                    fontSize: "16px",
-                    height: "48px",
-                    backgroundColor: "#f01436",
-                    borderRadius: "8px",
-                    "&:hover": { backgroundColor: "#f01436" },
-                    boxShadow: "none !important",
-                  }}
-                >
-                  انتخاب زمان تحویل
-                </Button>
+                <ModalDeliveryTime />
               </div>
             </div>
           </div>
