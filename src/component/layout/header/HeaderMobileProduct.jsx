@@ -22,11 +22,12 @@ function HeaderMobileProduct() {
         <Box sx={{ position: "absolute", top: 7, left: 3 }}>
           <HamMenu />
         </Box>
-        <img
-          src="https://okala.com/static/images/icons/logo-okala2.svg"
+        <Box
+          component={"img"}
+          src="image/logo-okala-h.svg"
           alt=""
           loading="lazy"
-          className="h-[62px] w-[56px]"
+          sx={{ width: "3.5rem", height: "3.875rem" }}
         />
       </Box>
       <Box

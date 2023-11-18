@@ -44,9 +44,8 @@ function TopHeader() {
             <div className="flex items-center rounded-[8px] bg-[#f8f8f8] px-[8px] py-[12px] cursor-pointer">
               <Box
                 component={PiStorefront}
-                sx={{ width: "20px", height: "20px" }}
+                sx={{ width: "1.25rem", height: "1.25rem" }}
               />
-
               <p className="text-sm text-[#363636] pr-1"> مشاهده فروشگاه‌ها</p>
             </div>
           </div>
@@ -66,7 +65,7 @@ function TopHeader() {
               <div className="flex items-center px-[8px] py-[6px] rounded-[10px] hover:bg-[#f8f8f8] mr-4">
                 <Box
                   component={LuShoppingCart}
-                  sx={{ width: "24px", height: "24px" }}
+                  sx={{ width: "1.5rem", height: "1.5rem" }}
                 />
 
                 <div className="flex flex-col items-start pr-3">

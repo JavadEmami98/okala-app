@@ -11,13 +11,28 @@ function Cart() {
   return (
     <div>
       <div onClick={() => setOpen(true)}>
-        <div className="relative">
-          <div className="absolute flex items-center justify-center top-0 right-0 rounded-[50%] bg-[#f01436] text-[#fff] text-[10px] h-[15px] w-[15px]">
+        <Box sx={{ position: "relative" }}>
+          <Box
+            sx={{
+              display: "flex",
+              position: "absolute",
+              alignItems: "center",
+              justifyContent: "center",
+              top: 0,
+              left: 0,
+              borderRadius: "50%",
+              background: "#f01436",
+              width: ".9375rem",
+              height: ".9375rem",
+              color: "#fff",
+              fontSize: ".625rem",
+            }}
+          >
             1
-          </div>
+          </Box>
           <ShoppingCartOutlinedIcon />
-        </div>
-        <Typography sx={{ fontSize: "14px !important", mt: "4px" }}>
+        </Box>
+        <Typography sx={{ fontSize: ".875rem !important", mt: ".25rem" }}>
           سبد خرید
         </Typography>
       </div>
@@ -33,7 +48,7 @@ function Cart() {
             <p className="text-[14.4px] text-[#000000DE] font-semibold pr-4">
               سبدهای خرید شما
             </p>
-            <div className=" justify-center h-[20px] w-[20px] rounded-[50%] bg-[#02a0a4]">
+            <div className="flex items-center justify-center h-[20px] w-[20px] rounded-[50%] bg-[#02a0a4]">
               <p className="text-xs mx-0.5 text-[#fff]">1</p>
             </div>
           </Box>

@@ -11,6 +11,7 @@ import "./SwiperGrouping.css";
 // import required modules
 import { Pagination } from "swiper/modules";
 import GroupingCart from "../Cart/GroupingCart";
+import { Box } from "@mui/material";
 
 const data = [
   { image: "/image/kharbar.png", title: "خواربار" },
@@ -28,7 +29,7 @@ const data = [
 
 function Grouping() {
   return (
-    <div className="my-8">
+    <Box sx={{marginY:"2rem"}}>
       <p className="text-lg text-start leading-8 text-gray-900 font-bold mb-6">
         دسته‌بندی
       </p>
@@ -45,7 +46,7 @@ function Grouping() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </Box>
   );
 }
 

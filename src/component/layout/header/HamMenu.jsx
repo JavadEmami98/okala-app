@@ -12,11 +12,11 @@ function HamMenu() {
         <MenuIcon
           onClick={() => setOpen(true)}
           sx={{
-            width: "48px",
+            width: "3rem",
             color: "#545454 !important",
-            height: "48px",
+            height: "3rem",
             cursor: "pointer",
-            padding: "12px",
+            padding: ".75rem",
             borderRadius: "50%",
             "&:hover": { backgroundColor: "#f8f8f8" },
           }}
@@ -31,12 +31,20 @@ function HamMenu() {
                 className="h-[49px] object-cover"
               />
               <CloseIcon
-                className="absolute top-2 left-2"
                 onClick={() => setOpen(false)}
-                sx={{ opacity: "50%", color: "#000000", cursor: "pointer" }}
+                sx={{
+                  opacity: "50%",
+                  color: "#000000",
+                  cursor: "pointer",
+                  position: "absolute",
+                  top: 5,
+                  right: 7,
+                  borderRadius: "50%",
+                  ":hover": { background: "#f8f8f8" },
+                }}
               />
             </div>
-            <Box sx={{ padding: "16px" }}>
+            <Box sx={{ padding: "1rem" }}>
               <ListHamMenu />
             </Box>
           </div>

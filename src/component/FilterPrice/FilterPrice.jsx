@@ -18,8 +18,18 @@ function FilterPrice() {
   return (
     <div>
       <Box
-        sx={{ boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px" }}
-        className="mb-3 rounded-xl p-4 max-h-[280px] min-h-[54px] flex flex-col transition-all duration-300"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+
+          marginBottom: ".75rem",
+          borderRadius: ".75rem",
+          padding: "1rem",
+          maxHeight: "17.5rem",
+          minHeight: "3.375rem",
+          boxShadow: " rgba(22, 22, 22, 0.04) 0px 2px",
+        }}
+        /*  className="mb-3 rounded-xl p-4 max-h-[280px] min-h-[54px] flex flex-col transition-all duration-300" */
       >
         <div
           onClick={handleClick}

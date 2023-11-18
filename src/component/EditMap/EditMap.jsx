@@ -36,7 +36,7 @@ function EditMap() {
         <DialogActions>
           <Box
             sx={{
-              borderRadius: "12px",
+              borderRadius: ".75rem",
               bgcolor: "#fff",
               padding: "1.5rem",
               width: "53rem",
@@ -51,7 +51,14 @@ function EditMap() {
                 paddingLeft: "0.5rem",
               }}
             >
-              <Box sx={{borderLeft:"4px solid #7cc8cc",borderRadius:"6.25rem",height:"1.25rem", marginRight:"0.625rem"}}></Box>
+              <Box
+                sx={{
+                  borderLeft: "4px solid #7cc8cc",
+                  borderRadius: "6.25rem",
+                  height: "1.25rem",
+                  marginRight: "0.625rem",
+                }}
+              ></Box>
               <h6 className="text-base font-medium text-gray-900">
                 جزئیات آدرس
               </h6>
@@ -59,8 +66,8 @@ function EditMap() {
             <Box
               sx={{
                 border: "1px solid #e6e6e6",
-                borderRadius: "8px",
-                height: "132px",
+                borderRadius: ".5rem",
+                height: "8.25rem",
                 position: "relative",
                 /* delete this item */
                 backgroundColor: "gray",
@@ -72,12 +79,12 @@ function EditMap() {
                   position: "absolute",
                   bottom: 10,
                   right: 10,
-                  padding: "6px 16px",
-                  borderRadius: "10px",
-                  height: "40px",
+                  padding: "0.375rem 1rem",
+                  borderRadius: ".625rem",
+                  height: "2.5rem",
                   /*  width: "182px", */
                   backgroundColor: "#fff",
-                  fontSize: "12px",
+                  fontSize: ".75rem",
                   color: "#02a0a4",
                   boxShadow:
                     "0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12)",
@@ -87,9 +94,9 @@ function EditMap() {
                 <Box
                   component={LuPenSquare}
                   sx={{
-                    width: "16px",
-                    height: "16px",
-                    marginLeft: "5px",
+                    width: "1rem",
+                    height: "1rem",
+                    marginRight: "5px",
                     color: "#02a0a4",
                   }}
                 />

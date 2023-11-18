@@ -1,11 +1,7 @@
 import React from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
 import "./Swiper2.css";
 
 // import required modules
@@ -101,7 +97,10 @@ function Swiper2() {
               modules={[Pagination]}
               className="swiper2"
             >
-              <SwiperSlide className="swiper-slide-2">
+              <SwiperSlide
+                style={{ background: "transparent" }}
+                className="swiper-slide-2"
+              >
                 <div className="flex flex-col h-[270px] py-2 justify-between">
                   <p className="text-xl font-black text-center text-[#eb1e27]">
                     اُتایم

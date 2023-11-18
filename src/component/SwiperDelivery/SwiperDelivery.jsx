@@ -14,7 +14,7 @@ import { Box, FormControlLabel, Radio, Typography } from "@mui/material";
 export default function SwiperDelivery() {
   return (
     <>
-      <Box sx={{position:"relative"}}>
+      <Box sx={{ position: "relative" }}>
         <Box
           sx={{
             display: "flex",
@@ -24,12 +24,12 @@ export default function SwiperDelivery() {
             zIndex: -10,
           }}
         >
-              <Box
+          <Box
             sx={{
               display: "flex",
               alignItems: "center",
               cursor: "pointer",
-              gap:"3px",
+              gap: "3px",
               width: "fit-content",
               fontSize: ".875rem",
               border: "1px solid #f0f0f0",
@@ -45,9 +45,9 @@ export default function SwiperDelivery() {
               left: 0,
             }}
             className="button-prev-slide"
-          >  <IoIosArrowForward />
+          >
+            <IoIosArrowForward />
             روز قبل
-          
           </Box>
           <Typography
             sx={{
@@ -65,7 +65,7 @@ export default function SwiperDelivery() {
               display: "flex",
               alignItems: "center",
               cursor: "pointer",
-              gap:"3px",
+              gap: "3px",
               width: "fit-content",
               fontSize: ".875rem",
               border: "1px solid #f0f0f0",
@@ -93,7 +93,7 @@ export default function SwiperDelivery() {
           }}
           modules={[Navigation]}
         >
-          <SwiperSlide>
+          <SwiperSlide className="swiper-slide-del">
             <Box
               sx={{ display: "flex", flexDirection: "column", width: "100%" }}
             >
@@ -195,7 +195,7 @@ export default function SwiperDelivery() {
               </Box>
             </Box>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="swiper-slide-del">
             <Box
               sx={{ display: "flex", flexDirection: "column", width: "100%" }}
             >
@@ -245,39 +245,6 @@ export default function SwiperDelivery() {
                 <FormControlLabel
                   sx={{
                     fontSize: ".875rem !important",
-                    paddingLeft: "0.5rem",
-                    color: "#afafaf",
-                  }}
-                  value="تحویل در 30 دقیقه"
-                  control={<Radio />}
-                  label="تحویل در 30 دقیقه"
-                />
-                <Typography
-                  sx={{
-                    fontSize: "0.875rem",
-                    color: "#afafaf",
-                    fontWeight: 400,
-                  }}
-                >
-                  ظرفیت تکمیل
-                </Typography>
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  paddingRight: ".75rem",
-                  minHeight: "3.75rem",
-                  marginBottom: "0.0625rem",
-                  borderRadius: "0.5rem",
-                  width: "100%",
-                  background: "#f8f8f8",
-                }}
-              >
-                <FormControlLabel
-                  sx={{
-                    fontSize: ".875rem",
                     paddingLeft: "0.5rem",
                     color: "#afafaf",
                   }}

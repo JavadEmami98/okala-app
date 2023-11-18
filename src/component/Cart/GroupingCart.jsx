@@ -11,8 +11,8 @@ function GroupingCart({ image, title }) {
             boxSizing: "border-box",
             display: "inline-block",
             position: "relative",
-            width: "56px",
-            height: "56px",
+            width: "3.5rem",
+            height: "3.5rem",
           }}
         >
           <img src={image} alt="" loading="lazy" />

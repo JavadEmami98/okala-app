@@ -70,7 +70,7 @@ export default function TabProfile() {
         "& .css-1aquho2-MuiTabs-indicator": { backgroundColor: "#f01436" },
         "& .css-1h9z7r5-MuiButtonBase-root-MuiTab-root": {
           fontSize: "1rem",
-          padding: "0px 36px",
+          padding: "0rem 2.25rem",
         },
       }}
     >

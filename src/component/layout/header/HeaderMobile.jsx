@@ -17,28 +17,45 @@ function HeaderMobile() {
   const [open3, setOpen3] = React.useState(false);
   return (
     <div>
-      <div className="relative flex flex-row pb-0 pt-4 !h-12 justify-center items-center">
-        <div className="absolute top-0 right-0">
+      <Box
+        sx={{
+          position: "relative",
+          display: "flex",
+          pt: "1rem",
+          height: "3rem",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Box sx={{ position: "absolute", top: 7, left: 4 }}>
           <HamMenu />
-        </div>
-        <img
-          src="https://okala.com/static/images/icons/logo-okala2.svg"
+        </Box>
+        <Box
+          component={"img"}
+          src="image/logo-okala-h.svg"
           alt=""
           loading="lazy"
-          className="h-[30px] w-[56px]"
+          sx={{ width: "3.5rem", height: "1.875rem" }}
         />
-      </div>
-      <div className="py-[7px]">
-        <div className="mx-[16px] py-[5px] h-[58px] relative">
+      </Box>
+      <Box sx={{ paddingY: "0.4375rem" }}>
+        <Box
+          sx={{
+            position: "relative",
+            marginX: "1rem",
+            paddingY: ".3125rem",
+            height: "3.625rem",
+          }}
+        >
           <div
             onClick={() => setOpen(true)}
             className="w-full flex items-center bg-gray-100 border border-gray-200 rounded-lg select-none px-4 !h-12"
           >
             <SearchIcon
               sx={{
-                height: "24px",
-                width: "24px",
-                ml: "8px",
+                height: "1.5rem",
+                width: "1.5rem",
+                mr: "0.5rem",
                 color: "#545454",
               }}
             />
@@ -55,7 +72,7 @@ function HeaderMobile() {
             <div className="h-14 relative shadow-md flex items-center px-4 bg-white  ">
               <EastOutlinedIcon
                 onClick={() => setOpen(false)}
-                sx={{ m: "12px" }}
+                sx={{ m: ".75rem" }}
               />
 
               <input
@@ -63,17 +80,32 @@ function HeaderMobile() {
                 className="h-full w-full  outline-none"
                 placeholder="جستجوی کالا یا برند"
               />
-              <div className="absolute p-3 top-1 left-3 rounded-[10px] bg-[#F8F8F8]">
+              <Box
+                sx={{
+                  position: "absolute",
+                  padding: "0.75rem",
+                  top: 3,
+                  right: 3,
+                  borderRadius: ".625rem",
+                  background: "#F8F8F8",
+                }}
+              >
                 <CloseOutlinedIcon />
-              </div>
+              </Box>
             </div>
-            <div className="flex my-3 pt-[5px]">
+            <Box
+              sx={{
+                display: "flex",
+                marginY: "0.75rem",
+                paddingTop: ".3125rem",
+              }}
+            >
               <div className="flex py-[6px] px-[8px] items-center gap-2">
                 <SearchIcon
                   sx={{
-                    height: "24px",
-                    width: "24px",
-                    ml: "8px",
+                    height: "1.5rem",
+                    width: "1.5rem",
+                    mr: "0.5rem",
                     color: "#545454",
                   }}
                 />
@@ -81,24 +113,24 @@ function HeaderMobile() {
                   نمایش همه نتایج برای fff
                 </p>
               </div>
-            </div>
+            </Box>
           </Drawer>
-        </div>
-      </div>
+        </Box>
+      </Box>
       <div className="px-4 py-1.5 border-t border-b border-gray-100 h-12 ">
         <div
           onClick={() => setOpen2(true)}
           className="w-full flex justify-between items-center px-2 h-[30px]"
         >
-          <div className="flex gap-2">
+          <Box sx={{ display: "flex", gap: "0.5rem" }}>
             <FmdGoodOutlinedIcon
-              sx={{ width: "20px", height: "20px", color: "#545454" }}
+              sx={{ width: "1.25rem", height: "1.25rem", color: "#545454" }}
             />
             <span class="text-[14px] text-[#545454] font-medium">مشهد، </span>
             <span class="text-[14px] text-[#545454] font-normal">
               سید رضی 46 پلاک ۳۱۳
             </span>
-          </div>
+          </Box>
           <NavigateBeforeIcon sx={{ color: "#545454" }} />
         </div>
         <Drawer
@@ -107,17 +139,37 @@ function HeaderMobile() {
           open={open2}
           onClose={() => setOpen2(false)}
         >
-          <div className="h-14 relative shadow-md flex items-center px-4 bg-white  ">
+          <Box
+            sx={{
+              height: "3.5rem",
+              position: "relative",
+              boxShadow:
+                "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+              display: "flex",
+              alignItems: "center",
+              paddingX: "1rem",
+              background: "#fff",
+            }}
+          >
             <EastOutlinedIcon
               onClick={() => setOpen2(false)}
-              sx={{ m: "12px" }}
+              sx={{ m: "0.75rem" }}
             />
 
             <p className="text-[14.4px] text-[#000000DE] font-semibold pr-4">
               انتخاب آدرس
             </p>
-          </div>
-          <div className="flex flex-col h-full w-full justify-between p-4">
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              width: "100%",
+              height: "100%",
+              padding: "1rem",
+            }}
+          >
             <div>
               <div className="flex flex-col justify-between cursor-pointer p-4 bg-[#e0f2f4] rounded-md border border-[#b0dee0]">
                 <div className="flex h-[68px]">
@@ -234,7 +286,7 @@ function HeaderMobile() {
                 افزودن آدرس جدید
               </span>
             </div>
-          </div>
+          </Box>
         </Drawer>
       </div>
     </div>

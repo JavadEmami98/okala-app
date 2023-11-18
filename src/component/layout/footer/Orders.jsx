@@ -6,7 +6,7 @@ function Orders() {
   return (
     <div>
           <AssignmentOutlinedIcon />
-            <Typography sx={{ fontSize: "14px !important", mt: "4px" }}>
+            <Typography sx={{ fontSize: ".875rem !important", mt: ".25rem" }}>
               سفارش ها
             </Typography>
     </div>

@@ -10,6 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import PropTypes from 'prop-types'
 import { LuPhoneCall } from "react-icons/lu";
 import { MdOutlineUploadFile } from "react-icons/md";
 import EastIcon from "@mui/icons-material/East";
@@ -34,10 +35,16 @@ function CustomTabPanel(props) {
   );
 }
 
+CustomTabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
   };
 }
 
@@ -49,19 +56,21 @@ export default function MobileTabProfile() {
   };
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
+
+
   return (
     <>
-      <Box className="px-[10px] h-[56px] flex items-center justify-start">
-        <EastIcon sx={{ width: "20px", height: "20px" }} />
-        <div className="pr-4">
+      <Box sx={{display:"flex",alignItems:"center",justifyContent:"flex-start",paddingX:"0.625rem",height:"3.5rem"}}>
+        <EastIcon sx={{ width: "1.25rem", height: "1.25rem" }} />
+        <Box sx={{paddingLeft:"1rem"}}>
           <div className="flex text-[14px] items-center gap-2 font-semibold">
             تماس با پشتیبانی
           </div>
-        </div>
+        </Box>
       </Box>
       <Box
         sx={{
@@ -99,7 +108,7 @@ export default function MobileTabProfile() {
           </Tabs>
         </Box>
         <CustomTabPanel value={value} index={0}>
-          <div className="flex flex-col ">
+          <Box sx={{display:"flex",flexDirection:"column"}}>
             <Box
               sx={{
                 backgroundImage: "url('/image/back-red.svg')",
@@ -109,7 +118,7 @@ export default function MobileTabProfile() {
               }}
               className=" z-0 rounded-lg m-4 flex justify-between items-center h-[82px] p-4 "
             >
-              <div className=" flex justify-between w-full  text-white">
+              <Box sx={{display:"flex",justifyContent:"space-between",width:"100%",color:"#fff"}}>
                 <div>
                   <div className="flex text-sm">
                     <Box
@@ -125,16 +134,16 @@ export default function MobileTabProfile() {
                   <p>همه روزه</p>
                   <p>ساعت 8 تا 22</p>
                 </div>
-              </div>
+              </Box>
             </Box>
             <hr />
-            <div className="p-4">
+            <Box sx={{padding:"1rem"}}>
               <p class="mb-9 text-start text-sm text-gray-600">
                 برای پیگیری سفارش یا طرح سوالات خود، از طریق فرم زیر با ما در
                 ارتباط باشید . تلاش میکنیم هرچه سریعتر به مشکل شما رسیدگی کنیم
               </p>
-              <div className="flex flex-col w-full items-center gap-5">
-                <div className="w-full">
+              <Box sx={{display:"flex",flexDirection:"column",width:"100%",alignItems:"center",gap:"1.25rem"}}>
+                <Box sx={{width:"100%"}}>
                   <FormControl sx={{ width: "100%" }}>
                     <Select
                       labelId="demo-simple-select-label"
@@ -148,8 +157,8 @@ export default function MobileTabProfile() {
                       <MenuItem value={30}>Thirty</MenuItem>
                     </Select>
                   </FormControl>
-                </div>
-                <div className="w-full">
+                </Box>
+                <Box sx={{width:"100%"}}>
                   <FormControl fullWidth>
                     <Select
                       labelId="demo-simple-select-label"
@@ -163,8 +172,8 @@ export default function MobileTabProfile() {
                       <MenuItem value={30}>Thirty</MenuItem>
                     </Select>
                   </FormControl>
-                </div>
-              </div>
+                </Box>
+              </Box>
 
               <TextareaAutosize
                 rows="8"
@@ -172,17 +181,17 @@ export default function MobileTabProfile() {
                 aria-label="textarea"
                 placeholder="لطفا در مورد موضوعی که انتخاب کرده اید توضیح دهید"
                 name="messageDescription"
-                style={{ height: " 208px", marginTop: "20px" }}
+                style={{ height: " 13rem", marginTop: "1.25rem" }}
               />
               <div className="flex justify-between flex-row-reverse gap-4 w-full">
                 <Button
                   variant="contained"
                   sx={{
-                    width: "197px",
-                    fontSize: "14px",
-                    height: "36px",
+                    width: "12.3125rem",
+                    fontSize: "0.875rem",
+                    height: "2.25rem",
                     backgroundColor: "#f01436",
-                    borderRadius: "10px",
+                    borderRadius: ".625rem",
                     "&:hover": { backgroundColor: "#f01436" },
                     boxShadow: "none !important",
                   }}
@@ -192,32 +201,32 @@ export default function MobileTabProfile() {
                 <Button
                   variant="outlined"
                   sx={{
-                    padding: "5px 15px",
-                    fontSize: "14px",
+                    padding: "0.3125rem 0.9375rem",
+                    fontSize: ".875rem",
                     border: "1px solid rgba(0, 0, 0, 0.23)",
-                    borderRadius: "10px",
+                    borderRadius: ".625rem",
                     color: "#000000de",
-                    height: "36px",
-                    width: "143px",
+                    height: "2.25rem",
+                    width: "8.9375rem",
                   }}
                 >
                   <Box
                     component={MdOutlineUploadFile}
                     sx={{
-                      width: "20px",
-                      height: "20px",
-                      marginLeft: "10px",
+                      width: "1.25rem",
+                      height: "1.25rem",
+                      marginLeft: ".625rem",
                       color: "rgb(104, 104, 104)",
                     }}
                   />
                   پیوست فایل
                 </Button>
               </div>
-            </div>
-          </div>
+            </Box>
+          </Box>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
-          <div className="flex flex-col gap-6 pt-6">
+          <Box sx={{display:"flex",flexDirection:"column",gap:"1.5rem",paddingTop:"1.5rem"}}>
             <Box
               sx={{
                 backgroundImage: "url('/image/back-red.svg')",
@@ -227,7 +236,7 @@ export default function MobileTabProfile() {
               }}
               className=" z-0 rounded-lg m-4 flex justify-between items-center h-[82px] p-4 "
             >
-              <div className=" flex justify-between w-full  text-white">
+              <Box sx={{display:"flex",justifyContent:"space-between",width:"100%",color:"#fff"}} >
                 <div>
                   <div className="flex text-sm">
                     <Box
@@ -242,10 +251,10 @@ export default function MobileTabProfile() {
                   <p>همه روزه</p>
                   <p>ساعت 8 تا 22</p>
                 </div>
-              </div>
+              </Box>
             </Box>
             <hr />
-          </div>
+          </Box>
         </CustomTabPanel>
       </Box>
     </>
